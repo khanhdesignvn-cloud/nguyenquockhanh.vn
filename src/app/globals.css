@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+:root {
+  --background: #060608;
+  --foreground: #f3f1ec;
+
+  --color-ink-950: #050506;
+  --color-ink-900: #0a0a0d;
+  --color-ink-800: #121218;
+  --color-ink-700: #1b1b23;
+  --color-ink-600: #27272f;
+  --color-ink-500: #3a3a44;
+
+  --color-mist-300: #c9c7c2;
+  --color-mist-400: #a6a4a0;
+  --color-mist-500: #85837f;
+
+  --color-gold-200: #f6e3b8;
+  --color-gold-300: #f0cf8c;
+  --color-gold-400: #e8b768;
+  --color-gold-500: #d69f45;
+  --color-gold-600: #b17f30;
+
+  --color-violet-400: #a78bfa;
+  --color-violet-500: #8b6cf0;
+  --color-violet-600: #6d4fd6;
+
+  --color-teal-400: #5eead4;
+  --color-teal-500: #2dd4bf;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-vietnam);
+
+  --color-ink-950: var(--color-ink-950);
+  --color-ink-900: var(--color-ink-900);
+  --color-ink-800: var(--color-ink-800);
+  --color-ink-700: var(--color-ink-700);
+  --color-ink-600: var(--color-ink-600);
+  --color-ink-500: var(--color-ink-500);
+
+  --color-mist-300: var(--color-mist-300);
+  --color-mist-400: var(--color-mist-400);
+  --color-mist-500: var(--color-mist-500);
+
+  --color-gold-200: var(--color-gold-200);
+  --color-gold-300: var(--color-gold-300);
+  --color-gold-400: var(--color-gold-400);
+  --color-gold-500: var(--color-gold-500);
+  --color-gold-600: var(--color-gold-600);
+
+  --color-violet-400: var(--color-violet-400);
+  --color-violet-500: var(--color-violet-500);
+  --color-violet-600: var(--color-violet-600);
+
+  --color-teal-400: var(--color-teal-400);
+  --color-teal-500: var(--color-teal-500);
+}
+
+* {
+  border-color: var(--color-ink-700);
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  position: relative;
+}
+
+/* Soft, slow-drifting gradient mesh sitting behind all page content */
+.gradient-mesh {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.gradient-mesh::before,
+.gradient-mesh::after {
+  content: "";
+  position: absolute;
+  width: 60vw;
+  height: 60vw;
+  max-width: 900px;
+  max-height: 900px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.28;
+  animation: drift 22s ease-in-out infinite alternate;
+}
+
+.gradient-mesh::before {
+  top: -10%;
+  left: -10%;
+  background: radial-gradient(circle, var(--color-violet-600), transparent 70%);
+}
+
+.gradient-mesh::after {
+  bottom: -15%;
+  right: -10%;
+  background: radial-gradient(circle, var(--color-gold-600), transparent 70%);
+  animation-delay: -11s;
+}
+
+@keyframes drift {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    transform: translate3d(4%, 6%, 0) scale(1.08);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gradient-mesh::before,
+  .gradient-mesh::after {
+    animation: none;
+  }
+}
+
+/* Soft glow shared by buttons, icon links, and interactive cards */
+.glow-interactive {
+  position: relative;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.glow-interactive:hover,
+.glow-interactive:focus-visible {
+  transform: translateY(-2px);
+}
+
+.glow-gold:hover,
+.glow-gold:focus-visible {
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--color-gold-400) 45%, transparent),
+    0 8px 30px -6px color-mix(in srgb, var(--color-gold-400) 55%, transparent);
+}
+
+.glow-violet:hover,
+.glow-violet:focus-visible {
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--color-violet-400) 45%, transparent),
+    0 8px 30px -6px color-mix(in srgb, var(--color-violet-400) 55%, transparent);
+}
+
+.text-gradient {
+  background: linear-gradient(
+    100deg,
+    var(--color-gold-300),
+    var(--color-gold-400) 35%,
+    var(--color-violet-400) 75%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.card-surface {
+  background: linear-gradient(
+    165deg,
+    color-mix(in srgb, var(--color-ink-800) 92%, white 2%),
+    var(--color-ink-900)
+  );
+  border: 1px solid var(--color-ink-700);
+}
