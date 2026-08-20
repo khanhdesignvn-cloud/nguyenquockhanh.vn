@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nguyễn Quốc Khánh — Người kể chuyện thương hiệu</title>
+<meta name="description" content="Blog và video về xây dựng thương hiệu, thiết kế và storytelling từ Nguyễn Quốc Khánh, founder Horus Agency.">
+<meta property="og:title" content="Nguyễn Quốc Khánh — Người kể chuyện thương hiệu">
+<meta property="og:description" content="Ghi chép và video thực chiến về xây dựng thương hiệu, thiết kế và storytelling.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nguyenquockhanh.vn">
+<meta property="og:image" content="https://nguyenquockhanh.vn/og-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nguyễn Quốc Khánh — Người kể chuyện thương hiệu">
+<meta name="twitter:description" content="Ghi chép và video thực chiến về xây dựng thương hiệu, thiết kế và storytelling.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#08090c;
+    --panel:#101218;
+    --panel2:#0c0e13;
+    --border:rgba(255,255,255,0.08);
+    --border-strong:rgba(255,255,255,0.16);
+    --text:#f3f4f6;
+    --sub:#9aa0ac;
+    --c1:#EF9393; --c2:#E17DC2; --c3:#998EE0; --c4:#43ADD0; --c5:#8BDEDA;
+    --grad:linear-gradient(to right, var(--c1), var(--c2), var(--c3), var(--c4), var(--c5));
+    --grad-soft:linear-gradient(to right, rgba(239,147,147,0.75), rgba(225,125,194,0.75), rgba(153,142,224,0.75), rgba(67,173,208,0.75), rgba(139,222,218,0.75));
+  }
+  html[data-theme="light"]{
+    --bg:#faf9f7;
+    --panel:#ffffff;
+    --panel2:#f4f3f0;
+    --border:rgba(0,0,0,0.08);
+    --border-strong:rgba(0,0,0,0.16);
+    --text:#0f1115;
+    --sub:#5b5f68;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);color:var(--text);
+    font-family:"Google Sans Flex","Google Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    overflow-x:hidden;transition:background .2s ease, color .2s ease;
+  }
+  a{color:inherit}
+  .progress-bar{
+    position:fixed;top:0;left:0;height:3px;width:0%;
+    background:var(--grad);z-index:100;transition:width .1s linear;
+  }
+  .glow{
+    position:absolute;width:1000px;height:900px;top:-380px;left:50%;
+    transform:translateX(-50%);
+    background:
+      radial-gradient(circle at 15% 30%, rgba(239,147,147,0.24), transparent 55%),
+      radial-gradient(circle at 40% 20%, rgba(225,125,194,0.22), transparent 55%),
+      radial-gradient(circle at 60% 40%, rgba(153,142,224,0.22), transparent 55%),
+      radial-gradient(circle at 80% 30%, rgba(67,173,208,0.2), transparent 55%),
+      radial-gradient(circle at 95% 50%, rgba(139,222,218,0.18), transparent 55%);
+    filter:blur(50px);pointer-events:none;z-index:0;
+  }
+  nav{
+    position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;
+    padding:28px 64px;max-width:1200px;margin:0 auto;
+  }
+  .logo{font-weight:600;letter-spacing:0.3px;font-size:18px;text-decoration:none}
+  .logo span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  nav ul{display:flex;gap:36px;list-style:none;align-items:center}
+  nav a{color:var(--sub);text-decoration:none;font-size:14px;transition:color .15s}
+  nav a:hover{color:var(--text)}
+  .nav-right{display:flex;align-items:center;gap:14px}
+  .theme-toggle{
+    width:36px;height:36px;border-radius:999px;border:1px solid var(--border);
+    background:var(--panel);color:var(--text);cursor:pointer;
+    display:flex;align-items:center;justify-content:center;font-size:15px;
+    transition:border-color .2s ease;
+  }
+  .theme-toggle:hover{border-color:var(--border-strong)}
+  .btn{
+    padding:10px 22px;border-radius:999px;
+    background:rgba(255,255,255,0.06);
+    backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,0.18);
+    color:var(--text);font-weight:600;font-size:14px;cursor:pointer;
+    text-decoration:none;display:inline-block;
+    transition:background .25s ease, transform .2s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+  .btn:hover{
+    background:rgba(255,255,255,0.12);
+    border-color:rgba(255,255,255,0.32);
+    transform:translateY(-2px);
+    box-shadow:0 10px 28px -10px rgba(255,255,255,0.15);
+  }
+  .btn:active{transform:translateY(0)}
+
+  .hero{position:relative;z-index:2;max-width:820px;margin:60px auto 0;text-align:center;padding:0 24px}
+  .badge{
+    display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;
+    border:1px solid var(--border);background:var(--panel);font-size:13px;color:var(--sub);margin-bottom:26px;
+  }
+  .badge .dot{width:6px;height:6px;border-radius:50%;background:var(--c4)}
+  h1{font-size:50px;line-height:1.12;font-weight:600;letter-spacing:-1.3px;margin-bottom:18px}
+  h1 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  p.sub{font-size:17px;color:var(--sub);line-height:1.65;max-width:540px;margin:0 auto 50px}
+
+  section{position:relative;z-index:2}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 64px}
+  .section-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:28px;flex-wrap:wrap;gap:16px}
+  .section-head h2{font-size:26px;font-weight:600;letter-spacing:-0.5px}
+  .section-head p{font-size:14px;color:var(--sub);margin-top:6px}
+
+  .stats-bar{display:flex;border:1px solid var(--border);border-radius:14px;background:var(--panel);margin-bottom:100px;overflow:hidden}
+  .stat{flex:1;padding:26px 20px;text-align:center;border-right:1px solid var(--border)}
+  .stat:last-child{border-right:none}
+  .stat .num{font-size:26px;font-weight:600;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .stat .lbl{font-size:13px;color:var(--sub);margin-top:6px}
+
+  .featured{display:grid;grid-template-columns:1.1fr 0.9fr;gap:36px;margin-bottom:90px;align-items:center}
+  .featured-media{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--border-strong);aspect-ratio:16/10;background:#000;cursor:pointer}
+  .featured-media img{width:100%;height:100%;object-fit:cover;opacity:0.82}
+  .featured-media::before{content:"";position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,0.75), transparent 55%)}
+  .featured-media .play{
+    position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:68px;height:68px;border-radius:50%;
+    background:rgba(8,9,12,0.65);border:1px solid var(--border-strong);display:flex;align-items:center;justify-content:center;
+    backdrop-filter:blur(4px);z-index:2;
+  }
+  .featured-media .play::after{content:"";border-style:solid;border-width:11px 0 11px 18px;border-color:transparent transparent transparent var(--c5);margin-left:5px}
+  .featured-tag{position:absolute;top:16px;left:16px;z-index:2;padding:5px 12px;border-radius:999px;background:var(--grad);color:#08090c;font-size:12px;font-weight:600}
+  .featured-dur{position:absolute;bottom:14px;right:14px;z-index:2;padding:3px 9px;border-radius:6px;background:rgba(8,9,12,0.75);font-size:12px;color:#fff}
+  .featured-body .cat{font-size:13px;font-weight:600;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:12px;display:block}
+  .featured-body h3{font-size:28px;font-weight:600;line-height:1.25;margin-bottom:14px;letter-spacing:-0.5px}
+  .featured-body p{font-size:15px;color:var(--sub);line-height:1.7;margin-bottom:22px}
+
+  .toolbar{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:20px}
+  .search-box{position:relative;flex:1;min-width:220px;max-width:320px}
+  .search-box input{
+    width:100%;padding:10px 16px 10px 38px;border-radius:999px;
+    border:1px solid var(--border);background:var(--panel2);color:var(--text);
+    font-size:14px;font-family:inherit;
+  }
+  .search-box input:focus{outline:none;border-color:var(--border-strong)}
+  .search-box svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);opacity:0.5}
+  .filters{display:flex;gap:10px;flex-wrap:wrap}
+  .filter-btn{
+    padding:8px 16px;border-radius:999px;font-size:13px;border:1px solid var(--border);
+    background:transparent;color:var(--sub);cursor:pointer;transition:all .15s;
+  }
+  .filter-btn:hover{border-color:var(--border-strong);color:var(--text)}
+  .filter-btn.active{
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+    color:var(--text);border-color:rgba(255,255,255,0.3);font-weight:600;
+  }
+
+  .blog-grid{margin-bottom:30px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .empty-state{display:none;text-align:center;padding:60px 0;color:var(--sub);font-size:14px}
+  .post-card{
+    background:var(--panel);border:1px solid var(--border);border-radius:14px;overflow:hidden;cursor:pointer;
+    transition:border-color .2s, transform .2s;
+  }
+  .post-card:hover{border-color:var(--border-strong);transform:translateY(-3px)}
+  .thumb{position:relative;width:100%;aspect-ratio:16/9;background:#000;overflow:hidden}
+  .thumb img{width:100%;height:100%;object-fit:cover;display:block;opacity:0.85}
+  .dur{position:absolute;bottom:10px;right:10px;padding:2px 8px;border-radius:5px;background:rgba(8,9,12,0.75);font-size:11px;color:#fff}
+  .watched-badge{
+    position:absolute;top:10px;left:10px;padding:3px 9px;border-radius:999px;
+    background:rgba(8,9,12,0.8);font-size:11px;color:var(--c5);border:1px solid rgba(139,222,218,0.4);
+  }
+  .play{
+    position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:50px;height:50px;border-radius:50%;
+    background:rgba(8,9,12,0.7);border:1px solid var(--border-strong);display:flex;align-items:center;justify-content:center;
+    backdrop-filter:blur(4px);
+  }
+  .play::after{content:"";border-style:solid;border-width:8px 0 8px 13px;border-color:transparent transparent transparent var(--c5);margin-left:3px}
+  .post-body{padding:20px}
+  .post-meta{font-size:12px;color:var(--sub);margin-bottom:10px;display:flex;gap:10px;align-items:center}
+  .post-meta .cat{font-weight:600;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .post-body h3{font-size:16px;font-weight:600;line-height:1.4;margin-bottom:8px}
+  .post-body p{font-size:13px;color:var(--sub);line-height:1.6}
+
+  .about{
+    margin:100px 0;padding:48px;border:1px solid var(--border);border-radius:18px;background:var(--panel);
+  }
+  .about-top{display:flex;gap:40px;flex-wrap:wrap;margin-bottom:44px}
+  .about-intro{flex:1;min-width:280px}
+  .about-intro h2{font-size:26px;font-weight:600;margin-bottom:14px}
+  .about-intro p{font-size:15px;color:var(--sub);line-height:1.75;margin-bottom:12px}
+  .timeline{flex:1;min-width:280px;border-left:1px solid var(--border);padding-left:28px}
+  .timeline-item{position:relative;padding-bottom:24px}
+  .timeline-item:last-child{padding-bottom:0}
+  .timeline-item::before{
+    content:"";position:absolute;left:-33px;top:4px;width:9px;height:9px;border-radius:50%;background:var(--grad);
+  }
+  .timeline-item .year{font-size:12px;color:var(--sub);font-weight:600;margin-bottom:4px}
+  .timeline-item .desc{font-size:14px;line-height:1.5}
+  .clients-label{font-size:13px;color:var(--sub);margin-bottom:16px}
+  .clients-grid{display:flex;gap:12px;flex-wrap:wrap}
+  .client-chip{
+    padding:10px 18px;border-radius:10px;border:1px solid var(--border);background:var(--panel2);
+    font-size:13px;color:var(--sub);
+  }
+
+  .newsletter{
+    border:1px solid var(--border);border-radius:18px;background:var(--panel);padding:44px;margin-bottom:100px;
+    display:flex;justify-content:space-between;align-items:center;gap:30px;position:relative;overflow:hidden;
+  }
+  .newsletter::before{content:"";position:absolute;top:-60%;right:-10%;width:340px;height:340px;border-radius:50%;background:var(--grad);opacity:0.12;filter:blur(50px)}
+  .newsletter-left{position:relative;z-index:1;max-width:420px}
+  .newsletter-left h3{font-size:22px;font-weight:600;margin-bottom:8px}
+  .newsletter-left p{font-size:14px;color:var(--sub);line-height:1.6}
+  .newsletter-form{position:relative;z-index:1;display:flex;gap:10px}
+  .newsletter-form input{
+    padding:12px 16px;border-radius:999px;border:1px solid var(--border);background:var(--panel2);
+    color:var(--text);font-size:14px;min-width:240px;font-family:inherit;
+  }
+  .newsletter-form input:focus{outline:none;border-color:var(--border-strong)}
+  .newsletter-form button{
+    padding:12px 24px;border-radius:999px;
+    background:rgba(255,255,255,0.06);
+    backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,0.18);
+    color:var(--text);font-weight:600;font-size:14px;cursor:pointer;
+    white-space:nowrap;transition:background .25s ease, transform .2s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+  .newsletter-form button:hover{
+    background:rgba(255,255,255,0.12);
+    border-color:rgba(255,255,255,0.32);
+    transform:translateY(-2px);
+    box-shadow:0 10px 28px -10px rgba(255,255,255,0.15);
+  }
+  .newsletter-form button:active{transform:translateY(0)}
+
+  footer{
+    position:relative;z-index:2;border-top:1px solid var(--border);padding:32px 64px;max-width:1200px;margin:0 auto;
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:13px;color:var(--sub);
+  }
+  footer .social{display:flex;gap:18px}
+  footer .social a{color:var(--sub);text-decoration:none}
+  footer .social a:hover{color:var(--text)}
+
+  .fab{
+    position:fixed;bottom:24px;right:24px;z-index:40;
+    display:flex;align-items:center;gap:8px;
+    padding:14px 22px;border-radius:999px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    border:1px solid rgba(255,255,255,0.22);
+    color:var(--text);font-weight:600;font-size:14px;cursor:pointer;
+    box-shadow:0 14px 34px -14px rgba(0,0,0,0.5);
+    transition:transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;
+  }
+  .fab:hover{
+    transform:translateY(-3px) scale(1.03);
+    background:rgba(255,255,255,0.14);
+    border-color:rgba(255,255,255,0.36);
+    box-shadow:0 18px 40px -10px rgba(0,0,0,0.55);
+  }
+
+  .modal-overlay{display:none;position:fixed;inset:0;z-index:50;background:rgba(5,5,7,0.85);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:24px}
+  .modal-overlay.open{display:flex}
+  .modal-box{width:100%;max-width:960px;max-height:92vh;overflow-y:auto;background:var(--panel2);border:1px solid var(--border-strong);border-radius:16px;box-shadow:0 40px 120px -30px rgba(153,142,224,0.4)}
+  .modal-top{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-bottom:1px solid var(--border)}
+  .modal-top span{font-size:14px;color:var(--sub)}
+  .modal-close{width:30px;height:30px;border-radius:8px;border:1px solid var(--border);background:transparent;color:var(--text);cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center}
+  .modal-close:hover{border-color:var(--border-strong)}
+  .video-wrap{position:relative;width:100%;aspect-ratio:16/9;background:#000}
+  .video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .modal-info{padding:20px}
+  .modal-info h3{font-size:18px;font-weight:600;margin-bottom:6px}
+  .modal-info p{font-size:13px;color:var(--sub);margin-bottom:16px}
+  .share-row{display:flex;gap:10px;margin-bottom:24px;flex-wrap:wrap}
+  .share-btn{
+    display:flex;align-items:center;gap:6px;padding:8px 14px;border-radius:999px;
+    border:1px solid var(--border);background:transparent;color:var(--sub);font-size:13px;cursor:pointer;
+    transition:border-color .15s, color .15s;
+  }
+  .share-btn:hover{border-color:var(--border-strong);color:var(--text)}
+  .related-label{font-size:13px;color:var(--sub);margin-bottom:12px;font-weight:600}
+  .related-list{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .related-item{cursor:pointer;border-radius:10px;overflow:hidden;border:1px solid var(--border)}
+  .related-item img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .related-item .rt{padding:10px;font-size:12px;line-height:1.4}
+
+  .yt-section{margin-bottom:100px}
+  .yt-panel{
+    display:grid;grid-template-columns:1.3fr 0.7fr;gap:0;
+    border:1px solid var(--border);border-radius:16px;overflow:hidden;background:var(--panel);
+  }
+  .yt-player{aspect-ratio:16/9;background:#000}
+  .yt-player iframe{width:100%;height:100%;border:0;display:block}
+  .yt-side{padding:32px;display:flex;flex-direction:column;justify-content:center;gap:16px}
+  .yt-side h3{font-size:20px;font-weight:600}
+  .yt-side p{font-size:14px;color:var(--sub);line-height:1.6}
+  .yt-sub-embed{border-radius:10px;overflow:hidden}
+  .yt-sub-embed iframe{border:0}
+  .yt-link{
+    display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:600;
+    background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;
+    text-decoration:none;width:fit-content;
+  }
+
+  @media (max-width:900px){
+    .wrap{padding:0 24px}
+    .blog-grid{grid-template-columns:1fr}
+    .featured{grid-template-columns:1fr}
+    .yt-panel{grid-template-columns:1fr}
+    .stats-bar{flex-wrap:wrap}
+    .stat{flex:1 1 50%;border-bottom:1px solid var(--border)}
+    nav{padding:20px 24px}
+    nav ul{display:none}
+    h1{font-size:36px}
+    .newsletter{flex-direction:column;align-items:flex-start}
+    .newsletter-form{width:100%}
+    .newsletter-form input{flex:1;min-width:0}
+    footer{padding:32px 24px}
+    .about{padding:28px}
+    .related-list{grid-template-columns:1fr}
+    .fab{padding:12px 16px;font-size:13px}
+  }
+</style>
+</head>
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+  <div class="glow"></div>
+
+  <nav>
+    <a href="#" class="logo">nguyenquockhanh<span>.vn</span></a>
+    <ul>
+      <li><a href="#about">Về tôi</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="giao-an-youtube-tiktok.html">Giáo án</a></li>
+      <li><a href="#">Dịch vụ</a></li>
+      <li><a href="#">Liên hệ</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Đổi giao diện sáng/tối">🌙</button>
+      <a href="mailto:hi@nguyenquockhanh.vn" class="btn">Liên hệ</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="badge"><span class="dot"></span> Người kể chuyện thương hiệu</div>
+    <h1>Câu chuyện <span class="grad">thương hiệu</span> bắt đầu từ đây</h1>
+    <p class="sub">Ghi chép và chia sẻ về xây dựng thương hiệu, thiết kế và storytelling — kèm video thực chiến từ những dự án thật.</p>
+  </section>
+
+  <div class="wrap">
+
+    <div class="stats-bar">
+      <div class="stat"><div class="num">48</div><div class="lbl">Video đã đăng</div></div>
+      <div class="stat"><div class="num">12K</div><div class="lbl">Người theo dõi</div></div>
+      <div class="stat"><div class="num">320K</div><div class="lbl">Lượt xem</div></div>
+      <div class="stat"><div class="num">5 năm</div><div class="lbl">Kinh nghiệm branding</div></div>
+    </div>
+
+    <section>
+      <div class="section-head">
+        <div><h2>Video nổi bật</h2><p>Nội dung mới nhất được xem nhiều nhất tuần này</p></div>
+      </div>
+      <div class="featured" id="featuredWrap"></div>
+    </section>
+
+    <section id="blog">
+      <div class="section-head">
+        <div><h2>Tất cả bài viết</h2><p>Nhấn vào video để xem trực tiếp trong popup</p></div>
+      </div>
+      <div class="toolbar">
+        <div class="search-box">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" id="searchInput" placeholder="Tìm bài viết...">
+        </div>
+        <div class="filters" id="filters">
+          <button class="filter-btn active" data-filter="all">Tất cả</button>
+          <button class="filter-btn" data-filter="thuong-hieu">Thương hiệu</button>
+          <button class="filter-btn" data-filter="thiet-ke">Thiết kế</button>
+          <button class="filter-btn" data-filter="storytelling">Storytelling</button>
+          <button class="filter-btn" data-filter="marketing">Marketing</button>
+        </div>
+      </div>
+
+      <div class="blog-grid" id="blogGrid"></div>
+      <div class="empty-state" id="emptyState">Không tìm thấy bài viết phù hợp.</div>
+    </section>
+
+    <section class="yt-section">
+      <div class="section-head">
+        <div><h2>Kênh YouTube</h2><p>Video mới nhất từ kênh của mình</p></div>
+        <a class="yt-link" href="https://youtube.com/@nguyenquockhanhvn88" target="_blank" rel="noopener">Xem tất cả video →</a>
+      </div>
+      <div class="yt-panel">
+        <div class="yt-player">
+          <iframe src="https://www.youtube.com/embed/videoseries?list=UU15lNWzz23Xb55A2N7p9llw" title="Video mới nhất từ kênh Nguyễn Quốc Khánh" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="yt-side">
+          <h3>Nguyễn Quốc Khánh</h3>
+          <p>Đào tạo thiết kế — Photoshop, thủ thuật đồ hoạ và chia sẻ nghề branding từ Horus Training.</p>
+          <a class="btn" href="https://youtube.com/@nguyenquockhanhvn88?sub_confirmation=1" target="_blank" rel="noopener" style="width:fit-content">Đăng ký kênh</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-top">
+        <div class="about-intro">
+          <h2>Về tôi</h2>
+          <p>Mình là Khánh — người sáng lập Horus Agency, một studio tư vấn và thiết kế thương hiệu tại Đà Nẵng. Song song đó mình cũng là giảng viên đại học, chia sẻ kiến thức về branding và thiết kế cho thế hệ làm nghề tiếp theo.</p>
+          <p>Kênh video và blog này là nơi mình ghi lại những bài học thực tế từ các dự án thương hiệu đã làm — không lý thuyết suông.</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item"><div class="year">20XX</div><div class="desc">Bắt đầu hành trình thiết kế thương hiệu tự do</div></div>
+          <div class="timeline-item"><div class="year">20XX</div><div class="desc">Thành lập Horus Agency tại Đà Nẵng</div></div>
+          <div class="timeline-item"><div class="year">20XX</div><div class="desc">Trở thành giảng viên đại học, giảng dạy branding &amp; thiết kế</div></div>
+          <div class="timeline-item"><div class="year">2026</div><div class="desc">Ra mắt kênh video và blog thương hiệu cá nhân</div></div>
+        </div>
+      </div>
+      <div class="clients-label">Đã đồng hành cùng</div>
+      <div class="clients-grid">
+        <div class="client-chip">Khách hàng A</div>
+        <div class="client-chip">Khách hàng B</div>
+        <div class="client-chip">Khách hàng C</div>
+        <div class="client-chip">Khách hàng D</div>
+        <div class="client-chip">Khách hàng E</div>
+      </div>
+    </section>
+
+    <div class="newsletter">
+      <div class="newsletter-left">
+        <h3>Nhận bài viết mới qua email</h3>
+        <p>Mỗi tuần một ghi chép về thương hiệu, thiết kế và storytelling — không spam.</p>
+      </div>
+      <form class="newsletter-form" onsubmit="event.preventDefault()">
+        <input type="email" placeholder="email@cuaban.com" required>
+        <button type="submit">Đăng ký</button>
+      </form>
+    </div>
+
+  </div>
+
+  <footer>
+    <span>© 2026 Nguyễn Quốc Khánh</span>
+    <div class="social">
+      <a href="mailto:hi@nguyenquockhanh.vn">Email</a>
+      <a href="#">YouTube</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Instagram</a>
+    </div>
+  </footer>
+
+  <button class="fab" id="fabBtn">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    Đặt lịch tư vấn
+  </button>
+
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-box">
+      <div class="modal-top">
+        <span>Đang phát video</span>
+        <button class="modal-close" id="modalClose" aria-label="Đóng">✕</button>
+      </div>
+      <div class="video-wrap" id="videoWrap"></div>
+      <div class="modal-info">
+        <h3 id="modalTitle"></h3>
+        <p id="modalDesc"></p>
+        <div class="share-row">
+          <button class="share-btn" id="copyLinkBtn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Sao chép link</button>
+          <button class="share-btn" id="shareFbBtn">Facebook</button>
+          <button class="share-btn" id="shareZaloBtn">Zalo</button>
+        </div>
+        <div class="related-label">Xem tiếp</div>
+        <div class="related-list" id="relatedList"></div>
+      </div>
+    </div>
+  </div>
+
+<script>
+  var posts = [
+    {id:'p1', video:'eekwORkBLbI', category:'thuong-hieu', catLabel:'Thương hiệu', title:'Vì sao câu chuyện quan trọng hơn logo', desc:'Góc nhìn về việc xây dựng bản sắc thương hiệu bắt đầu từ câu chuyện, không phải hình ảnh.', date:'3 ngày trước', duration:'12:04'},
+    {id:'p2', video:'eekwORkBLbI', category:'thiet-ke', catLabel:'Thiết kế', title:'Quy trình thiết kế bộ nhận diện từ A-Z', desc:'Từng bước triển khai một dự án nhận diện thương hiệu thực tế cho khách hàng.', date:'1 tuần trước', duration:'08:16'},
+    {id:'p3', video:'eekwORkBLbI', category:'storytelling', catLabel:'Storytelling', title:'Kể chuyện thương hiệu trên mạng xã hội', desc:'Cách biến nội dung khô khan thành câu chuyện có cảm xúc và giữ chân người xem.', date:'2 tuần trước', duration:'15:30'},
+    {id:'p4', video:'eekwORkBLbI', category:'thuong-hieu', catLabel:'Case study', title:'Hành trình tái định vị một thương hiệu địa phương', desc:'Phân tích thực tế một dự án rebrand từ ý tưởng đến triển khai.', date:'3 tuần trước', duration:'18:42', featured:true},
+    {id:'p5', video:'eekwORkBLbI', category:'marketing', catLabel:'Marketing', title:'Nội dung nào khiến khách hàng nhớ đến bạn', desc:'Những nguyên tắc cơ bản để tạo nội dung thương hiệu dễ nhớ, dễ lan toả.', date:'1 tháng trước', duration:'09:48'},
+    {id:'p6', video:'eekwORkBLbI', category:'storytelling', catLabel:'Chia sẻ', title:'Bài học sau 5 năm làm branding tại Đà Nẵng', desc:'Những điều rút ra được sau nhiều dự án thương hiệu lớn nhỏ.', date:'1 tháng trước', duration:'20:05'}
+  ];
+
+  var thumb = function(id){ return 'https://img.youtube.com/vi/' + id + '/hqdefault.jpg'; };
+  var activeFilter = 'all';
+  var searchTerm = '';
+
+  function getWatched(){
+    try{ return JSON.parse(localStorage.getItem('nqk_watched') || '[]'); }catch(e){ return []; }
+  }
+  function markWatched(id){
+    var w = getWatched();
+    if(w.indexOf(id) === -1){ w.push(id); localStorage.setItem('nqk_watched', JSON.stringify(w)); }
+  }
+
+  function renderFeatured(){
+    var f = posts.find(function(p){ return p.featured; }) || posts[0];
+    var el = document.getElementById('featuredWrap');
+    el.innerHTML =
+      '<div class="featured-media" data-id="' + f.id + '">' +
+        '<span class="featured-tag">Mới nhất</span>' +
+        '<img src="' + thumb(f.video) + '" alt="">' +
+        '<div class="play"></div>' +
+        '<span class="featured-dur">' + f.duration + '</span>' +
+      '</div>' +
+      '<div class="featured-body">' +
+        '<span class="cat">' + f.catLabel + '</span>' +
+        '<h3>' + f.title + '</h3>' +
+        '<p>' + f.desc + '</p>' +
+        '<button class="btn" data-id="' + f.id + '">Xem ngay</button>' +
+      '</div>';
+    el.querySelector('.featured-media').addEventListener('click', function(){ openModal(f.id); });
+    el.querySelector('.btn').addEventListener('click', function(){ openModal(f.id); });
+  }
+
+  function renderGrid(){
+    var grid = document.getElementById('blogGrid');
+    var empty = document.getElementById('emptyState');
+    var watched = getWatched();
+    var filtered = posts.filter(function(p){
+      var matchCat = activeFilter === 'all' || p.category === activeFilter;
+      var matchSearch = p.title.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1;
+      return matchCat && matchSearch;
+    });
+    grid.innerHTML = '';
+    empty.style.display = filtered.length === 0 ? 'block' : 'none';
+    filtered.forEach(function(p){
+      var isWatched = watched.indexOf(p.id) !== -1;
+      var card = document.createElement('div');
+      card.className = 'post-card';
+      card.setAttribute('data-id', p.id);
+      card.innerHTML =
+        '<div class="thumb">' +
+          '<img src="' + thumb(p.video) + '" alt="">' +
+          (isWatched ? '<span class="watched-badge">Đã xem</span>' : '') +
+          '<div class="play"></div>' +
+          '<span class="dur">' + p.duration + '</span>' +
+        '</div>' +
+        '<div class="post-body">' +
+          '<div class="post-meta"><span class="cat">' + p.catLabel + '</span><span>·</span><span>' + p.date + '</span></div>' +
+          '<h3>' + p.title + '</h3>' +
+          '<p>' + p.desc + '</p>' +
+        '</div>';
+      card.addEventListener('click', function(){ openModal(p.id); });
+      grid.appendChild(card);
+    });
+  }
+
+  function renderRelated(currentId){
+    var others = posts.filter(function(p){ return p.id !== currentId; }).slice(0, 3);
+    var list = document.getElementById('relatedList');
+    list.innerHTML = '';
+    others.forEach(function(p){
+      var item = document.createElement('div');
+      item.className = 'related-item';
+      item.innerHTML = '<img src="' + thumb(p.video) + '" alt=""><div class="rt">' + p.title + '</div>';
+      item.addEventListener('click', function(){ openModal(p.id); });
+      list.appendChild(item);
+    });
+  }
+
+  var overlay = document.getElementById('modalOverlay');
+  var videoWrap = document.getElementById('videoWrap');
+
+  function openModal(postId){
+    var p = posts.find(function(x){ return x.id === postId; });
+    if(!p) return;
+    videoWrap.innerHTML = '<iframe src="https://www.youtube.com/embed/' + p.video + '?autoplay=1&rel=0" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+    document.getElementById('modalTitle').textContent = p.title;
+    document.getElementById('modalDesc').textContent = p.desc;
+    renderRelated(postId);
+    markWatched(postId);
+    renderGrid();
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    window._currentShareUrl = 'https://www.youtube.com/watch?v=' + p.video;
+  }
+
+  function closeModal(){
+    overlay.classList.remove('open');
+    videoWrap.innerHTML = '';
+    document.body.style.overflow = '';
+  }
+
+  document.getElementById('modalClose').addEventListener('click', closeModal);
+  overlay.addEventListener('click', function(e){ if(e.target === overlay) closeModal(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeModal(); });
+
+  document.getElementById('copyLinkBtn').addEventListener('click', function(){
+    var btn = this;
+    navigator.clipboard.writeText(window._currentShareUrl || location.href).then(function(){
+      var old = btn.innerHTML;
+      btn.textContent = 'Đã sao chép';
+      setTimeout(function(){ btn.innerHTML = old; }, 1800);
+    });
+  });
+  document.getElementById('shareFbBtn').addEventListener('click', function(){
+    window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window._currentShareUrl || location.href), '_blank');
+  });
+  document.getElementById('shareZaloBtn').addEventListener('click', function(){
+    window.open('https://zalo.me/share?u=' + encodeURIComponent(window._currentShareUrl || location.href), '_blank');
+  });
+
+  document.getElementById('searchInput').addEventListener('input', function(e){
+    searchTerm = e.target.value;
+    renderGrid();
+  });
+  document.querySelectorAll('.filter-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      activeFilter = btn.getAttribute('data-filter');
+      renderGrid();
+    });
+  });
+
+  var themeToggle = document.getElementById('themeToggle');
+  function applyTheme(t){
+    document.documentElement.setAttribute('data-theme', t);
+    themeToggle.textContent = t === 'light' ? '☀️' : '🌙';
+    localStorage.setItem('nqk_theme', t);
+  }
+  themeToggle.addEventListener('click', function(){
+    var current = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    applyTheme(current);
+  });
+  applyTheme(localStorage.getItem('nqk_theme') || 'dark');
+
+  document.getElementById('fabBtn').addEventListener('click', function(){
+    window.location.href = 'mailto:hi@nguyenquockhanh.vn?subject=Đặt lịch tư vấn thương hiệu';
+  });
+
+  window.addEventListener('scroll', function(){
+    var h = document.documentElement;
+    var scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+    document.getElementById('progressBar').style.width = scrolled + '%';
+  });
+
+  renderFeatured();
+  renderGrid();
+</script>
+</body>
+</html>
