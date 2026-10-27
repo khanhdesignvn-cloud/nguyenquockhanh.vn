@@ -1,0 +1,461 @@
+{
+ "site": {
+  "eyebrow": "Người kể chuyện thương hiệu · Giám đốc sáng tạo Horus Agency",
+  "title": "Bộ nhận diện *kể đúng câu chuyện* của thương hiệu bạn",
+  "lead": "Tôi là Nguyễn Quốc Khánh, tư vấn và thiết kế thương hiệu cho doanh nghiệp Việt từ 2019. Chọn các mục bên dưới, xem báo giá chi tiết theo từng hạng mục, rồi gửi cho tôi qua Zalo hoặc email. Tôi phản hồi trong vòng 24 giờ.",
+  "phone": "0988886901",
+  "email": "khanhdesignvn@gmail.com",
+  "terms": "Giá chưa gồm VAT. Thanh toán 70% khi ký, 30% khi bàn giao. Báo giá chính thức gửi sau buổi trao đổi brief.",
+  "stats": [
+   {
+    "v": "500+",
+    "l": "thương hiệu Việt đã đồng hành"
+   },
+   {
+    "v": "4.000+",
+    "l": "dự án trên Fiverr, Top Rated Seller"
+   },
+   {
+    "v": "2019",
+    "l": "sáng lập Horus Agency tại Đà Nẵng"
+   },
+   {
+    "v": "ĐH Duy Tân",
+    "l": "giảng viên thỉnh giảng thiết kế"
+   }
+  ]
+ },
+ "packages": [
+  {
+   "id": "dinh-huong",
+   "no": "01",
+   "name": "Tư vấn thiết kế & định hướng sáng tạo",
+   "desc": "Nền móng chiến lược trước khi thiết kế",
+   "badge": "Bắt đầu từ đây",
+   "days": 5,
+   "on": false,
+   "items": [
+    {
+     "id": "brief",
+     "name": "Khảo sát & phân tích thương hiệu",
+     "desc": "Buổi trao đổi brief cùng chủ doanh nghiệp; Phân tích đối thủ và thị trường mục tiêu; Chân dung khách hàng mục tiêu",
+     "price": 1000000,
+     "def": true
+    },
+    {
+     "id": "tinh-cach",
+     "name": "Tính cách & hình mẫu thương hiệu",
+     "desc": "Xác định tính cách thương hiệu; Hình mẫu thương hiệu (brand archetype); Định vị so với đối thủ",
+     "price": 1000000,
+     "def": true
+    },
+    {
+     "id": "moodboard",
+     "name": "Moodboard định hướng thiết kế",
+     "desc": "Hình thái thiết kế và trải nghiệm theo tiêu chí người dùng; 2–3 hướng moodboard để lựa chọn",
+     "price": 1000000,
+     "def": true
+    },
+    {
+     "id": "creative-brief",
+     "name": "Bảng tóm tắt sáng tạo (Creative brief)",
+     "desc": "Thông điệp, từ khoá, giọng điệu thương hiệu; Làm căn cứ duyệt thiết kế ở các bước sau",
+     "price": 1000000,
+     "def": true
+    }
+   ]
+  },
+  {
+   "id": "logo",
+   "no": "02",
+   "name": "Thiết kế logo",
+   "desc": "3 phương án, chỉnh sửa không giới hạn",
+   "days": 5,
+   "on": false,
+   "items": [
+    {
+     "id": "logo-pa",
+     "name": "Thiết kế 3 phương án logo",
+     "desc": "Trình bày 3 phương án ban đầu kèm diễn giải ý tưởng; Mockup logo trên ứng dụng thực tế; Đội ngũ thiết kế trên 5 năm kinh nghiệm",
+     "price": 4500000,
+     "def": true
+    },
+    {
+     "id": "logo-chinh",
+     "name": "Chỉnh sửa & hoàn thiện",
+     "desc": "Số lần chỉnh sửa không giới hạn đến khi chốt; Bàn giao file gốc AI, PDF, PNG, SVG",
+     "price": 1500000,
+     "def": true
+    }
+   ]
+  },
+  {
+   "id": "guideline",
+   "no": "03",
+   "name": "Bộ hướng dẫn sử dụng thương hiệu",
+   "desc": "Brand guideline 10 hạng mục chuẩn",
+   "days": 15,
+   "on": false,
+   "items": [
+    {
+     "id": "logo-system",
+     "name": "Hệ thống logo chuẩn (Logo systems)",
+     "desc": "Logo chính (Primary); Logo phụ (Secondary); Logo đơn sắc (Monochrome); Logo đảo màu trên nền tối (Reverse)",
+     "price": 3000000,
+     "def": true
+    },
+    {
+     "id": "grid",
+     "name": "Hệ lưới dựng logo (Grid system)",
+     "desc": "Dựng logo trên lưới chuẩn; Tỷ lệ cố định giữa các thành phần",
+     "price": 1500000,
+     "def": true
+    },
+    {
+     "id": "mau",
+     "name": "Quy chuẩn màu sắc (Colour palette)",
+     "desc": "Màu chính và màu phụ; Mã màu chuẩn CMYK, RGB, HEX, Pantone",
+     "price": 2000000,
+     "def": true
+    },
+    {
+     "id": "chu",
+     "name": "Hệ thống kiểu chữ (Typography)",
+     "desc": "Font chính cho tiêu đề; Font phụ cho nội dung; Cấp bậc chữ và khoảng cách dòng",
+     "price": 2000000,
+     "def": true
+    },
+    {
+     "id": "bien-the",
+     "name": "Các biến thể logo (Logo variations)",
+     "desc": "Logo ngang và dọc; Có và không có tagline; Biểu tượng (icon) dùng riêng",
+     "price": 2500000,
+     "def": true
+    },
+    {
+     "id": "kich-thuoc",
+     "name": "Kích thước tối thiểu & khoảng cách an toàn",
+     "desc": "Kích thước nhỏ nhất cho in ấn và digital; Vùng an toàn quanh logo theo tỷ lệ",
+     "price": 1500000,
+     "def": true
+    },
+    {
+     "id": "dos",
+     "name": "Quy tắc sử dụng (Do's & Don'ts)",
+     "desc": "Trường hợp nên dùng; Lỗi cần tránh: bóp méo, đổi màu, thêm hiệu ứng, đặt trên nền khó nhìn",
+     "price": 1500000,
+     "def": true
+    },
+    {
+     "id": "pattern",
+     "name": "Họa tiết & yếu tố đồ hoạ (Pattern & graphic elements)",
+     "desc": "Pattern phát triển từ logo; Yếu tố đồ hoạ tăng tính nhận diện",
+     "price": 4000000,
+     "def": true
+    },
+    {
+     "id": "icon",
+     "name": "Hệ thống icon (Iconography)",
+     "desc": "Bộ icon thống nhất nét, độ dày, phong cách; Dùng cho giao diện và ấn phẩm truyền thông",
+     "price": 3500000,
+     "def": true
+    },
+    {
+     "id": "hinh-anh",
+     "name": "Định hướng hình ảnh (Photography)",
+     "desc": "Tông màu; Ánh sáng; Cảm xúc và bố cục ảnh",
+     "price": 2500000,
+     "def": true
+    }
+   ]
+  },
+  {
+   "id": "ung-dung",
+   "no": "04",
+   "name": "Thiết kế bộ nhận diện ứng dụng",
+   "desc": "Văn phòng, không gian, sản phẩm, POSM, truyền thông",
+   "days": 15,
+   "on": false,
+   "items": [
+    {
+     "id": "van-phong",
+     "name": "Nhận diện văn phòng (Stationery)",
+     "desc": "Danh thiếp; Tiêu đề thư, phong bì, kẹp file; Thẻ nhân viên; Chữ ký email",
+     "price": 6000000,
+     "def": true
+    },
+    {
+     "id": "khong-gian",
+     "name": "Nhận diện không gian (Environmental)",
+     "desc": "Biển hiệu chính; Bảng chỉ dẫn, bảng tên phòng ban; Khu vực lễ tân, phòng họp; Đồng phục nhân viên",
+     "price": 7000000,
+     "def": true
+    },
+    {
+     "id": "san-pham",
+     "name": "Nhận diện sản phẩm & bao bì",
+     "desc": "Nhãn sản phẩm; Hộp, túi; Tem niêm phong, thẻ treo",
+     "price": 6000000,
+     "def": true
+    },
+    {
+     "id": "posm",
+     "name": "Ấn phẩm bán hàng (P.O.S.M)",
+     "desc": "Banner, standee, backdrop sự kiện; Poster; Brochure, catalogue",
+     "price": 6000000,
+     "def": true
+    },
+    {
+     "id": "truyen-thong",
+     "name": "Nhận diện truyền thông số",
+     "desc": "Ảnh bìa và ảnh đại diện fanpage; Mẫu bài đăng mạng xã hội; Mẫu email marketing",
+     "price": 4000000,
+     "def": true
+    },
+    {
+     "id": "qua-tang",
+     "name": "Quà tặng thương hiệu (Merchandise)",
+     "desc": "Áo thun, nón; Bình nước, sổ tay, túi vải; Quà tặng khách hàng",
+     "price": 3000000,
+     "def": true
+    }
+   ]
+  },
+  {
+   "id": "website",
+   "no": "05",
+   "name": "Thiết kế & lập trình website",
+   "desc": "10 ngày thiết kế + 20 ngày lập trình",
+   "days": 30,
+   "on": false,
+   "items": [
+    {
+     "id": "web-dinh-huong",
+     "name": "Định hướng & cấu trúc website",
+     "desc": "Mục tiêu chuyển đổi và đối tượng truy cập; Sơ đồ trang: Trang chủ, Giới thiệu, Sản phẩm/Dịch vụ, Tin tức, Liên hệ",
+     "price": 3000000,
+     "def": true
+    },
+    {
+     "id": "web-ui",
+     "name": "Thiết kế giao diện (UI design)",
+     "desc": "Bố cục Header, Banner, Nội dung, Footer; Áp dụng màu sắc, chữ, icon, hình ảnh theo nhận diện; Phiên bản máy tính và điện thoại",
+     "price": 15000000,
+     "def": true
+    },
+    {
+     "id": "web-ux",
+     "name": "Trải nghiệm người dùng (UX design)",
+     "desc": "Điều hướng rõ ràng, dễ sử dụng; Nút kêu gọi hành động nổi bật; Hành trình người dùng tối ưu chuyển đổi",
+     "price": 5000000,
+     "def": true
+    },
+    {
+     "id": "web-dev",
+     "name": "Lập trình & vận hành",
+     "desc": "Lập trình theo giao diện đã chốt; Tối ưu tốc độ và hiển thị điện thoại; Hướng dẫn quản trị nội dung",
+     "price": 15000000,
+     "def": true
+    }
+   ]
+  }
+ ],
+ "tiers": [
+  {
+   "min": 60000000,
+   "pct": 10
+  },
+  {
+   "min": 30000000,
+   "pct": 5
+  }
+ ],
+ "projects": [
+  {
+   "name": "Zoseo",
+   "cat": "branding",
+   "label": "Branding",
+   "link": "https://horusbranding.com/project/zoseo/",
+   "img": "https://horusbranding.com/wp-content/uploads/2022/07/Artboard-16-scaled.jpeg"
+  },
+  {
+   "name": "Mori Coffee",
+   "cat": "packaging",
+   "label": "Branding · Bao bì",
+   "link": "https://horusbranding.com/project/mori-coffee/",
+   "img": "https://horusbranding.com/wp-content/uploads/2023/06/Artboard-5@odinbi-scaled.jpeg"
+  },
+  {
+   "name": "3rdHouse",
+   "cat": "branding",
+   "label": "Branding",
+   "link": "https://horusbranding.com/project/3rdhouse/",
+   "img": "https://horusbranding.com/wp-content/uploads/2023/03/ezgif-3-57cc38912f.gif"
+  },
+  {
+   "name": "BrewMaster",
+   "cat": "packaging",
+   "label": "Branding · Bao bì",
+   "link": "https://horusbranding.com/project/brewmaster/",
+   "img": "https://horusbranding.com/wp-content/uploads/2023/12/Asset-5.jpg"
+  },
+  {
+   "name": "Sante Hospital",
+   "cat": "branding",
+   "label": "Branding",
+   "link": "https://horusbranding.com/project/sante-hospital/",
+   "img": "https://horusbranding.com/wp-content/uploads/2023/02/Asset-9-scaled.jpg"
+  },
+  {
+   "name": "VietPAT",
+   "cat": "logo",
+   "label": "Logo",
+   "link": "https://horusbranding.com/project/vietpat/",
+   "img": "https://horusbranding.com/wp-content/uploads/2019/03/03-copy-scaled.jpg"
+  },
+  {
+   "name": "Bentika Cafe",
+   "cat": "packaging",
+   "label": "Branding · Bao bì",
+   "link": "https://horusbranding.com/project/bentika-cafe/",
+   "img": "https://horusbranding.com/wp-content/uploads/2023/11/Artboard-3-scaled.jpg"
+  },
+  {
+   "name": "Wetara",
+   "cat": "branding",
+   "label": "Branding",
+   "link": "https://horusbranding.com/project/wetara/",
+   "img": "https://horusbranding.com/wp-content/uploads/2023/04/Artboard-16@web-scaled.jpg"
+  },
+  {
+   "name": "Chin ơi!",
+   "cat": "packaging",
+   "label": "Bao bì",
+   "link": "https://horusbranding.com/project/chin-oi/",
+   "img": "https://horusbranding.com/wp-content/uploads/2022/11/3-21-scaled.jpg"
+  },
+  {
+   "name": "3A Signature",
+   "cat": "branding",
+   "label": "Branding",
+   "link": "https://horusbranding.com/project/3a-signature/",
+   "img": "https://horusbranding.com/wp-content/uploads/2022/11/07_3A_Cover-scaled.jpg"
+  },
+  {
+   "name": "Logo Collection Vol.2",
+   "cat": "logo",
+   "label": "Logo",
+   "link": "https://horusbranding.com/project/logo-collection-vol-2/",
+   "img": "https://horusbranding.com/wp-content/uploads/2023/02/02-logo-scaled.jpg"
+  },
+  {
+   "name": "Rich Dental",
+   "cat": "branding",
+   "label": "Branding",
+   "link": "https://horusbranding.com/project/rich-dental/",
+   "img": "https://horusbranding.com/wp-content/uploads/2022/11/IMG_40014-copy-scaled.jpg"
+  },
+  {
+   "name": "Greenfarm",
+   "cat": "branding",
+   "label": "Branding",
+   "link": "https://horusbranding.com/project/greenfarm/",
+   "img": "https://horusbranding.com/wp-content/uploads/2022/11/BAO-3-copy-scaled.jpg"
+  },
+  {
+   "name": "KOKORO",
+   "cat": "branding",
+   "label": "Branding",
+   "link": "https://horusbranding.com/project/kokoro/",
+   "img": "https://horusbranding.com/wp-content/uploads/2022/11/KOKOOO_12.gif"
+  },
+  {
+   "name": "Zenthia",
+   "cat": "branding",
+   "label": "Branding",
+   "link": "https://horusbranding.com/project/zenthia/",
+   "img": "https://horusbranding.com/wp-content/uploads/2023/03/ezgif-3-cc8ef004b9.gif"
+  },
+  {
+   "name": "GPS Group",
+   "cat": "branding",
+   "label": "Branding",
+   "link": "https://horusbranding.com/project/gps-group/",
+   "img": "https://horusbranding.com/wp-content/uploads/2022/11/Artboard-14behance-scaled.jpg"
+  },
+  {
+   "name": "Max10",
+   "cat": "packaging",
+   "label": "Bao bì",
+   "link": "https://horusbranding.com/project/max10/",
+   "img": "https://horusbranding.com/wp-content/uploads/2022/11/z2337022115080_9208150c44d4f86e81f336285430dc91-scaled.jpg"
+  },
+  {
+   "name": "SM English Center",
+   "cat": "logo",
+   "label": "Logo",
+   "link": "https://horusbranding.com/project/sm-english-center/",
+   "img": "https://horusbranding.com/wp-content/uploads/2023/04/Stationery_Mockup_3-copy-scaled.jpg"
+  },
+  {
+   "name": "NEXUS",
+   "cat": "branding",
+   "label": "Branding",
+   "link": "https://horusbranding.com/project/nexus/",
+   "img": "https://horusbranding.com/wp-content/uploads/2022/07/Asset-36-scaled.jpg"
+  },
+  {
+   "name": "Immortal Packaging",
+   "cat": "packaging",
+   "label": "Bao bì",
+   "link": "https://horusbranding.com/project/immortal-packaging/",
+   "img": "https://horusbranding.com/wp-content/uploads/2023/04/mat-truoc.png"
+  },
+  {
+   "name": "HUY LOGISTICS",
+   "cat": "logo",
+   "label": "Logo",
+   "link": "https://horusbranding.com/project/huy-logistics/",
+   "img": "https://horusbranding.com/wp-content/uploads/2022/11/15.jpeg"
+  }
+ ],
+ "recent": [
+  "100 năm cà phê Khe Sanh",
+  "Khe Sanh Farm",
+  "Hoàng Kim Minh Furniture",
+  "Shining Star",
+  "Girls In Tech Club",
+  "Mystari Coffee",
+  "Nguyên Khôi Pool & Spa"
+ ],
+ "steps": [
+  {
+   "t": "Trao đổi brief",
+   "d": "Bạn kể về sản phẩm, khách hàng, đối thủ. Tôi gửi bảng câu hỏi để chốt mục tiêu."
+  },
+  {
+   "t": "Báo giá & hợp đồng",
+   "d": "Phạm vi, thời gian, chi phí ghi rõ từng gói. Ký và tạm ứng 70%."
+  },
+  {
+   "t": "Định hướng sáng tạo",
+   "d": "Moodboard, định vị và câu chuyện thương hiệu để duyệt trước khi vẽ."
+  },
+  {
+   "t": "Thiết kế & chỉnh sửa",
+   "d": "Trình bày phương án logo và hệ thống, chỉnh sửa theo góp ý."
+  },
+  {
+   "t": "Bàn giao",
+   "d": "File gốc AI, PDF, PNG, SVG cùng brand guideline để dùng lâu dài."
+  }
+ ],
+ "quoteNotes": [
+  "Báo giá có hiệu lực 30 ngày kể từ ngày lập.",
+  "Chi phí chưa bao gồm thuế VAT, chi phí in ấn, sản xuất, tên miền và hosting.",
+  "Thanh toán 2 đợt: 70% khi ký hợp đồng, 30% trước khi bàn giao file gốc.",
+  "Tiến độ tính từ ngày nhận đủ brief và tạm ứng; các mục có thể triển khai song song để rút ngắn thời gian.",
+  "Bàn giao file gốc AI, PDF, PNG, SVG; quyền sử dụng thuộc về khách hàng sau khi thanh toán đủ.",
+  "Báo giá chính thức sẽ được điều chỉnh theo phạm vi chốt sau buổi trao đổi brief."
+ ]
+}

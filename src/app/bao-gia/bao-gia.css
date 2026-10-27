@@ -1,0 +1,4 @@
+@import "@fontsource-variable/google-sans-flex";
+.nqk, .nqk button, .nqk input, .nqk textarea, .nqk .nqk-doc {
+  font-family: "Google Sans Flex Variable", "Google Sans Flex", system-ui, sans-serif;
+}

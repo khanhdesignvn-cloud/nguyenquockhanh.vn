@@ -1,0 +1,24 @@
+/* NQK · nút trang chủ chuẩn theo nút dọc "Cùng nhau kể chuyện nhé!":
+   nút outlined của theme (viên + vòng mũi tên, viền trắng), rê chuột chữ chuyển sắc xanh → đỏ */
+.nqk .nqk-btn .qodef-m-text{color:#fff;-webkit-text-fill-color:#fff;transition:color .25s ease-out,-webkit-text-fill-color .25s ease-out}
+.nqk .nqk-btn:hover .qodef-m-text,.nqk .nqk-btn:focus-visible .qodef-m-text{background-image:linear-gradient(90deg,#207bfe,#ee4e5d);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.nqk .nqk-btn:disabled{opacity:.55}
+/* màu bôi chọn chữ: tím màu nhấn (toàn site) */
+::selection{background:#998EE0!important;color:#fff!important}
+::-moz-selection{background:#998EE0!important;color:#fff!important}
+/* chân trang */
+.nqk-fw{margin-top:18px}
+.nqk-fc,.nqk-fl{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.nqk-fc li{display:grid;gap:2px;margin:0}
+.nqk-fc small{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;opacity:.6}
+.nqk-fc a,.nqk-fc span,.nqk-fl a{color:inherit;text-decoration:none;font-size:15px;line-height:1.55}
+.nqk-fl{gap:10px}
+.nqk-fl li{margin:0}
+.nqk-fc a:hover,.nqk-fl a:hover{color:#998EE0}
+html #qodef-page-footer .nqk-fl li.more a,html #qodef-page-footer .nqk-fw a.nqk-fcta,html.nqk-light #qodef-page-footer .nqk-fw a.nqk-fcta{color:#998EE0!important;font-weight:600}
+.nqk-fcta{display:inline-block;margin-top:16px;font-size:15px;text-decoration:none}
+.nqk-fcta:hover{text-decoration:underline}
+.nqk-copy{margin:0 0 12px;text-align:center;font-size:13px;opacity:.65}
+
+/* ẩn cụm 3 cột chân trang (Khánh yêu cầu bỏ) */
+#qodef-page-footer-top-area{display:none!important}

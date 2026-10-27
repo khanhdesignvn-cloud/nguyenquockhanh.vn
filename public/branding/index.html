@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Branding · Bàn làm việc</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--den:#0B0B0B;--den2:#161616;--den3:#222;--xam:#6B6B6B;--xam2:#A3A3A3;--vien:#E4E4E4;--nen:#F4F4F2;--trang:#fff;--r:10px}
+*{margin:0;padding:0;box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{height:100%}
+body{font:14px/1.55 Arimo,Arial,sans-serif;color:var(--den);background:var(--nen);-webkit-font-smoothing:antialiased}
+button,input,textarea,select{font:inherit;color:inherit}
+a{color:inherit}
+
+/* ---------- khung ---------- */
+.app{display:grid;grid-template-columns:232px 1fr;min-height:100vh}
+.sb{background:var(--den);color:#fff;display:flex;flex-direction:column;position:sticky;top:0;height:100vh}
+.logo{padding:22px 20px 18px;border-bottom:1px solid #222}
+.logo b{display:block;font:700 22px/1 Arimo;letter-spacing:6px}
+.logo span{display:block;font-size:11.5px;color:var(--xam2);margin-top:8px;letter-spacing:.5px}
+.nav{padding:14px 10px;display:flex;flex-direction:column;gap:3px}
+.nav .h{font:700 10.5px/1 Arimo;letter-spacing:2.4px;color:#777;padding:10px 12px 8px}
+.nav button{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:none;border:0;border-radius:9px;padding:11px 12px;color:#D6D6D6;cursor:pointer;transition:.15s}
+.nav button:hover{background:#1B1B1B;color:#fff}
+.nav button.on{background:#fff;color:var(--den)}
+.nav button i{font:700 12px/1 Arimo;font-style:normal;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;border:1.5px solid currentColor;flex:none}
+.nav button.on i{background:var(--den);color:#fff;border-color:var(--den)}
+.nav button span{font-weight:600;font-size:14px;line-height:1.25}
+.nav button small{display:block;font-weight:400;font-size:11px;opacity:.6;margin-top:2px}
+.sbf{margin-top:auto;padding:16px 20px;border-top:1px solid #222;font-size:11.5px;color:#8a8a8a;line-height:1.5}
+.sbf b{color:#fff;font-weight:600}
+@media(max-width:900px){.app{grid-template-columns:minmax(0,1fr)}.sb{position:static;height:auto}.nav{flex-direction:row;overflow:auto}.nav .h,.sbf{display:none}.nav button{flex:none}}
+
+.top{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:14px 24px;background:#fff;border-bottom:1px solid var(--vien);position:sticky;top:0;z-index:5}
+.top h1{font:700 18px/1.2 Arimo;margin-right:auto}
+.top h1 small{display:block;font:400 12px Arimo;color:var(--xam);margin-top:3px}
+select.da{border:1px solid var(--vien);border-radius:8px;padding:8px 10px;background:#fff;max-width:260px}
+.nut{display:inline-flex;align-items:center;gap:7px;border:0;border-radius:8px;padding:9px 14px;background:var(--den);color:#fff;font-weight:600;font-size:13px;cursor:pointer;transition:.15s;white-space:nowrap;text-decoration:none}
+.nut:hover{background:#2a2a2a}
+.nut.v{background:#fff;color:var(--den);box-shadow:inset 0 0 0 1.5px var(--vien)}
+.nut.v:hover{box-shadow:inset 0 0 0 1.5px var(--den)}
+.nut.nho{padding:6px 10px;font-size:12px}
+.luu{font-size:12px;color:var(--xam)}
+
+.wrap{display:grid;grid-template-columns:minmax(360px,470px) 1fr;gap:22px;padding:22px 24px 60px;align-items:start}
+@media(max-width:1180px){.wrap{grid-template-columns:1fr}}
+.form{display:flex;flex-direction:column;gap:14px}
+.card{background:#fff;border:1px solid var(--vien);border-radius:var(--r);padding:16px 18px}
+.card>h3{font:700 11.5px/1.3 Arimo;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.card>h3 small{margin-left:auto;font:400 12px Arimo;letter-spacing:0;text-transform:none;color:var(--xam)}
+.card>h3 .so{width:22px;height:22px;border-radius:50%;background:var(--den);color:#fff;display:grid;place-items:center;font-size:11px;letter-spacing:0}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.f{display:flex;flex-direction:column;gap:4px;margin-bottom:10px}
+.f:last-child{margin-bottom:0}
+.f label{font:600 11.5px Arimo;color:var(--xam)}
+.f input,.f textarea,.f select{border:1px solid var(--vien);border-radius:7px;padding:8px 10px;background:#fff;width:100%}
+.f textarea{resize:vertical;min-height:64px;line-height:1.5}
+.f input:focus,.f textarea:focus,.f select:focus{outline:0;border-color:var(--den)}
+.goi{font-size:12px;color:var(--xam)}
+
+/* goi dich vu */
+.gc{border:1px solid var(--vien);border-radius:9px;margin-bottom:10px;overflow:hidden}
+.gc .gh{display:flex;align-items:center;gap:8px;padding:9px 10px;background:#FAFAF8;border-bottom:1px solid var(--vien)}
+.gc .gh .bd{width:24px;height:24px;border-radius:50%;background:var(--den);color:#fff;display:grid;place-items:center;font-weight:700;font-size:12px;flex:none}
+.gc .gh input{flex:1;border:0;background:none;font-weight:700;padding:4px}
+.gc .gh input:focus{outline:0;background:#fff}
+.gc .gh .tong{font-weight:700;white-space:nowrap}
+.x{border:0;background:none;color:var(--xam2);cursor:pointer;font-size:16px;line-height:1;padding:4px}
+.x:hover{color:var(--den)}
+.it{display:grid;grid-template-columns:1fr 54px 104px 22px;gap:6px;padding:6px 10px;align-items:center;border-bottom:1px dashed #eee}
+.it input{border:1px solid transparent;border-radius:5px;padding:5px 6px;background:none;width:100%;font-size:13px}
+.it input:hover{border-color:var(--vien)} .it input:focus{outline:0;border-color:var(--den);background:#fff}
+.it input.so{text-align:right}
+.gf{display:flex;align-items:center;gap:8px;padding:8px 10px;font-size:12px;color:var(--xam);flex-wrap:wrap}
+.gf label{display:flex;align-items:center;gap:5px;cursor:pointer}
+.gf input[type=text]{border:1px solid var(--vien);border-radius:6px;padding:5px 8px;width:130px;text-align:right}
+
+/* checklist danh muc */
+.dm h4{font:700 12px Arimo;letter-spacing:1px;text-transform:uppercase;margin:12px 0 6px;color:var(--xam)}
+.dm h4:first-child{margin-top:0}
+.dm label{display:grid;grid-template-columns:18px 1fr auto;gap:8px;align-items:center;padding:7px 8px;border-radius:7px;cursor:pointer;font-size:13.5px}
+.dm label:hover{background:#F6F6F4}
+.dm label em{font-style:normal;color:var(--xam);font-size:12px;white-space:nowrap}
+.dm input{accent-color:var(--den);width:16px;height:16px}
+.ck label{display:flex;gap:8px;align-items:flex-start;padding:5px 0;font-size:13.5px;cursor:pointer}
+.ck input{accent-color:var(--den);margin-top:3px;width:15px;height:15px;flex:none}
+.them{display:flex;gap:6px;margin-top:6px}
+.them input{flex:1;border:1px solid var(--vien);border-radius:7px;padding:7px 9px}
+.dong{display:grid;grid-template-columns:62px 1fr 22px;gap:6px;align-items:center;margin-bottom:6px}
+.dong input{border:1px solid var(--vien);border-radius:6px;padding:6px 8px;width:100%}
+.dong.b3{grid-template-columns:1fr 110px 22px}
+.tag{display:flex;flex-wrap:wrap;gap:6px}
+.tag button{border:1.5px solid var(--vien);background:#fff;border-radius:99px;padding:5px 11px;font-size:12.5px;cursor:pointer}
+.tag button.on{background:var(--den);border-color:var(--den);color:#fff}
+.tc{display:grid;grid-template-columns:92px 1fr 92px;gap:8px;align-items:center;font-size:12.5px;margin-bottom:8px}
+.tc span:last-child{text-align:right}
+.tc input{accent-color:var(--den)}
+.mau{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.mau .o{display:flex;flex-direction:column;align-items:center;gap:3px}
+.mau input[type=color]{width:46px;height:46px;border:1px solid var(--vien);border-radius:8px;padding:2px;background:#fff;cursor:pointer}
+.mau input[type=text]{width:70px;border:1px solid var(--vien);border-radius:5px;padding:3px 4px;font-size:11px;text-align:center}
+.mb{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.mb .o{aspect-ratio:1;border-radius:7px;background:#F2F2F0 center/cover;position:relative;border:1px dashed #d4d4d4;display:grid;place-items:center;color:var(--xam2);cursor:pointer;font-size:20px}
+.mb .o.co{border-style:solid}
+.mb .o .x{position:absolute;right:2px;top:2px;background:#fff;border-radius:50%;width:20px;height:20px;padding:0;font-size:12px}
+
+/* ---------- tong quan ---------- */
+.sb .dv{padding:14px 20px;border-bottom:1px solid #222}
+.sb .dv a{color:#aaa;text-decoration:none;font-size:12.5px;display:inline-flex;gap:6px;align-items:center}
+.sb .dv a:hover{color:#fff}
+.sb .dv b{display:block;font-size:16px;line-height:1.3;margin-top:10px;color:#fff}
+.sb .dv span{display:block;font-size:11.5px;color:#8a8a8a;margin-top:3px}
+.sb .dv .pb{height:4px;background:#2a2a2a;border-radius:9px;margin-top:10px;overflow:hidden}
+.sb .dv .pb i{display:block;height:100%;background:#fff}
+.nav button.xong i{background:#fff;color:#0B0B0B;border-color:#fff}
+.nav button.on.xong i{background:#0B0B0B;color:#fff;border-color:#0B0B0B}
+.nav button em{margin-left:auto;font-style:normal;font-size:11.5px;opacity:.6}
+.sbt{display:flex;gap:6px;flex-wrap:wrap;padding:12px 16px 16px}
+.sbt .nut{background:#1c1c1c;color:#ddd}
+.sbt .nut:hover{background:#2a2a2a}
+.dash{padding:22px 24px 60px;max-width:1380px}
+.stat{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px}
+@media(max-width:1000px){.stat{grid-template-columns:repeat(2,1fr)}}
+.stat div{background:#fff;border:1px solid var(--vien);border-radius:var(--r);padding:14px 16px}
+.stat div.den{background:var(--den);color:#fff;border-color:var(--den)}
+.stat small{display:block;font-size:11.5px;letter-spacing:1.4px;text-transform:uppercase;color:var(--xam)}
+.stat div.den small{color:#999}
+.stat b{display:block;font-size:24px;margin-top:6px;letter-spacing:-.3px}
+.stat span{font-size:12px;color:var(--xam)}
+.tb{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
+.tb input[type=search]{flex:1;min-width:220px;border:1px solid var(--vien);border-radius:8px;padding:9px 12px;background:#fff}
+.tb select{border:1px solid var(--vien);border-radius:8px;padding:8px 10px;background:#fff}
+.chip{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.chip button{border:1.5px solid var(--vien);background:#fff;border-radius:99px;padding:6px 12px;font-size:12.5px;font-weight:600;cursor:pointer}
+.chip button.on{background:var(--den);color:#fff;border-color:var(--den)}
+.chip button i{font-style:normal;opacity:.55;margin-left:4px;font-weight:400}
+.bang2{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border:1px solid var(--vien);border-radius:var(--r);overflow:hidden}
+.bang2 th{text-align:left;font-size:11px;letter-spacing:1.3px;text-transform:uppercase;color:var(--xam);font-weight:700;padding:10px 12px;border-bottom:1px solid var(--vien);background:#FAFAF8;white-space:nowrap}
+.bang2 td{padding:11px 12px;border-bottom:1px solid #F0F0EE;vertical-align:middle;font-size:13.5px}
+.bang2 tr:last-child td{border-bottom:0}
+.bang2 tbody tr{cursor:pointer;transition:.12s}
+.bang2 tbody tr:hover{background:#F7F7F5}
+.bang2 td b{display:block;font-weight:700}
+.bang2 td small{color:var(--xam);font-size:12px}
+.bang2 .s{text-align:right;white-space:nowrap}
+.ma{font:600 12px/1 Arimo;color:var(--xam);white-space:nowrap}
+.pill{display:inline-block;border-radius:99px;padding:4px 10px;font-size:11.5px;font-weight:700;white-space:nowrap;border:1.5px solid transparent}
+.pill.tiemnang{background:#F1F1EF;color:#555}
+.pill.baogia{background:#E6E6E3;color:#222}
+.pill.kyhd{background:#CFCFCB;color:#111}
+.pill.thietke{background:#555;color:#fff}
+.pill.bangiao{background:#222;color:#fff}
+.pill.xong{background:#0B0B0B;color:#fff}
+.pill.dung{background:#fff;color:#999;border-color:#ddd;text-decoration:line-through}
+.buoc{display:flex;gap:3px}
+.buoc i{width:18px;height:6px;border-radius:9px;background:#E4E4E2}
+.buoc i.x{background:#0B0B0B}
+.trang{display:flex;gap:6px;justify-content:flex-end;align-items:center;margin-top:12px;font-size:12.5px;color:var(--xam)}
+.trang button{border:1px solid var(--vien);background:#fff;border-radius:7px;min-width:32px;padding:6px 9px;cursor:pointer}
+.trang button.on{background:var(--den);color:#fff;border-color:var(--den)}
+.rong{text-align:center;padding:50px 20px;color:var(--xam)}
+.hdsd{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin:18px 0 6px}
+@media(max-width:1100px){.hdsd{grid-template-columns:repeat(3,1fr)}}
+.hdsd div{background:#fff;border:1px solid var(--vien);border-radius:var(--r);padding:12px 13px;font-size:12.5px;color:var(--xam);line-height:1.45}
+.hdsd b{display:flex;gap:8px;align-items:center;color:var(--den);font-size:13.5px;margin-bottom:5px}
+.hdsd b i{font-style:normal;width:22px;height:22px;border-radius:50%;background:var(--den);color:#fff;display:grid;place-items:center;font-size:11px;flex:none}
+.xongb{display:flex;gap:10px;align-items:center;justify-content:space-between;background:#fff;border:1.5px dashed #cfcfcb;border-radius:var(--r);padding:12px 14px;font-size:13px}
+.xongb.ok{border-style:solid;border-color:var(--den)}
+.giao .r{display:grid;grid-template-columns:110px 1fr 22px;gap:6px;align-items:center;margin-bottom:6px}
+.giao .r select,.giao .r input{border:1px solid var(--vien);border-radius:6px;padding:6px 8px;width:100%;font-size:13px}
+.giao .r .ln{grid-column:2/3}
+.thu{display:grid;grid-template-columns:1fr auto;gap:6px 10px;align-items:center;padding:9px 0;border-bottom:1px dashed #eee}
+.thu:last-child{border:0}
+.thu b{font-size:13.5px}
+.thu small{display:block;color:var(--xam);font-size:12px}
+.thu .c{display:flex;gap:6px;align-items:center}
+.thu input[type=date]{border:1px solid var(--vien);border-radius:6px;padding:5px 6px;font-size:12px}
+.thu label{display:flex;gap:5px;align-items:center;font-size:12.5px;font-weight:600;cursor:pointer}
+.thu input[type=checkbox]{accent-color:var(--den);width:16px;height:16px}
+.doc .bb td,.doc .bb th{font-size:10pt}
+.doc .kv2{display:grid;grid-template-columns:150pt 1fr;gap:3pt 10pt;font-size:10pt;margin-bottom:6pt}
+.doc .kv2 b{font-weight:600;color:#555}
+.doc h2.sec{font-size:10.5pt;letter-spacing:2px;text-transform:uppercase;margin:14pt 0 6pt;padding-bottom:4pt;border-bottom:2px solid #0B0B0B}
+.doc .qa{border-bottom:1px solid #eee;padding:5pt 0;font-size:10pt;break-inside:avoid}
+.doc .qa b{display:block;font-weight:700;margin-bottom:2pt}
+.doc .qa span.tr{display:block;min-height:22pt;border-bottom:1px dotted #aaa}
+.doc .hs{background:#0B0B0B;color:#fff;margin:-18mm -18mm 12pt;padding:16mm 18mm 12mm}
+.doc .hs .k{font-size:9pt;letter-spacing:3px;text-transform:uppercase;color:#aaa}
+.doc .hs h1{font-size:26pt;margin:6pt 0 4pt;line-height:1.1}
+.doc .hs p{color:#ccc;font-size:10pt}
+.doc .tien6{display:grid;grid-template-columns:repeat(6,1fr);gap:5pt;margin:6pt 0}
+.doc .tien6 div{border:1px solid #ddd;border-radius:6px;padding:6pt;font-size:8.5pt;text-align:center}
+.doc .tien6 div.x{background:#0B0B0B;color:#fff;border-color:#0B0B0B}
+.doc .tien6 b{display:block;font-size:13pt}
+
+/* ---------- kanban ---------- */
+.dash{max-width:none;min-width:0}
+.stat>div{min-width:0}
+@media(max-width:700px){.dash{padding:14px 12px 40px}.stat{grid-template-columns:1fr 1fr;gap:8px}.stat b{font-size:17px}.stat span{display:none}.tb input[type=search]{min-width:0;flex:1 1 100%;order:-1}.kcol{flex-basis:82vw}.top{padding:12px 14px}.hdsd{display:none}}
+main{min-width:0}
+.app>main{overflow-x:hidden}
+.vw{display:inline-flex;background:#fff;border:1px solid var(--vien);border-radius:8px;padding:3px}
+.vw button{border:0;background:none;border-radius:6px;padding:6px 12px;font-weight:600;font-size:12.5px;cursor:pointer;color:var(--xam)}
+.vw button.on{background:var(--den);color:#fff}
+.kb{display:flex;gap:12px;overflow-x:auto;padding:2px 2px 14px;align-items:flex-start;scroll-snap-type:x proximity}
+.kcol{flex:0 0 276px;background:#EAEAE7;border-radius:12px;padding:10px 8px 8px;display:flex;flex-direction:column;max-height:calc(100vh - 250px);scroll-snap-align:start}
+.kcol.gon{flex:0 0 50px;cursor:pointer;min-height:220px;align-items:center}
+.kcol.gon .kh2{writing-mode:vertical-rl;transform:rotate(180deg);flex-direction:row-reverse;gap:10px}
+.kcol.gon .kh2 small,.kcol.gon .kl,.kcol.gon .kadd{display:none}
+.kh2{display:flex;align-items:center;gap:8px;padding:2px 6px 10px}
+.kh2 b{font-size:13.5px}
+.kh2 .dem{font-size:11.5px;font-weight:700;background:#fff;border-radius:99px;padding:2px 8px}
+.kh2 small{margin-left:auto;font-size:11.5px;color:var(--xam);white-space:nowrap}
+.kh2 button{border:0;background:none;cursor:pointer;color:var(--xam);font-size:15px;padding:0 2px}
+.kcol[data-tt=xong] .kh2 .dem,.kcol[data-tt=thietke] .kh2 .dem{background:var(--den);color:#fff}
+.kl{display:flex;flex-direction:column;gap:8px;overflow-y:auto;min-height:36px;padding:2px;border-radius:9px;transition:background .15s}
+.kl.keo{background:rgba(11,11,11,.06);outline:2px dashed #bbb;outline-offset:-2px}
+.kc{background:#fff;border-radius:9px;padding:10px 11px 9px;box-shadow:0 1px 0 rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.04);cursor:grab;position:relative;transition:box-shadow .12s,transform .12s}
+.kc:hover{box-shadow:0 0 0 1.5px var(--den)}
+.kc.dang{opacity:.35}
+.kc .lb{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:6px}
+.kc .lb span{font-size:10.5px;font-weight:700;border-radius:4px;padding:2px 6px;background:#EFEFEC;color:#444}
+.kc .lb span.tre{background:#0B0B0B;color:#fff}
+.kc .lb span.gan{background:#FFE9A8;color:#6b4d00}
+.kc b{display:block;font-size:13.5px;line-height:1.35}
+.kc small{display:block;color:var(--xam);font-size:12px;margin-top:1px}
+.kc .kf{display:flex;align-items:center;gap:8px;margin-top:9px}
+.kc .kf .buoc i{width:14px;height:5px}
+.kc .kf em{margin-left:auto;font-style:normal;font-size:12px;font-weight:700}
+.kc .kf .pt{font-size:10.5px;color:var(--xam);font-weight:600}
+.kc .mo6{display:flex;gap:3px;margin-top:8px;opacity:0;transition:.15s}
+.kc:hover .mo6{opacity:1}
+.kc .mo6 a{flex:1;text-align:center;font-size:10.5px;font-weight:700;text-decoration:none;border-radius:5px;padding:4px 0;background:#F2F2EF;color:#333}
+.kc .mo6 a:hover{background:var(--den);color:#fff}
+.kc .mo6 a.x{background:#0B0B0B;color:#fff}
+@media(hover:none){.kc .mo6{opacity:1}}
+.kadd{margin-top:8px}
+.kadd input{width:100%;border:0;border-radius:8px;padding:9px 10px;background:transparent;font-size:13px}
+.kadd input:hover{background:rgba(255,255,255,.6)}
+.kadd input:focus{outline:0;background:#fff;box-shadow:0 0 0 1.5px var(--den)}
+.ph-kc{height:4px;border-radius:9px;background:var(--den);margin:-2px 0}
+/* ngan keo (drawer) */
+.man{position:fixed;inset:0;background:rgba(0,0,0,.28);z-index:40;opacity:0;pointer-events:none;transition:.2s}
+.man.on{opacity:1;pointer-events:auto}
+.ngan{position:fixed;top:0;right:0;bottom:0;width:min(440px,100vw);background:#fff;z-index:41;transform:translateX(102%);transition:transform .22s;overflow-y:auto;box-shadow:-10px 0 30px rgba(0,0,0,.12)}
+.ngan.on{transform:none}
+.ngan .nh{position:sticky;top:0;background:var(--den);color:#fff;padding:16px 18px;display:flex;gap:10px;align-items:flex-start;z-index:2}
+.ngan .nh b{display:block;font-size:17px;line-height:1.3}
+.ngan .nh small{display:block;color:#aaa;font-size:12px;margin-top:3px}
+.ngan .nh button{margin-left:auto;background:none;border:0;color:#fff;font-size:20px;cursor:pointer;line-height:1}
+.ngan .nb2{padding:16px 18px 30px}
+.ngan h4{font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:var(--xam);margin:18px 0 8px}
+.ngan h4:first-child{margin-top:0}
+.ngan .bb6 label{display:grid;grid-template-columns:20px 22px 1fr auto;gap:8px;align-items:center;padding:7px 0;border-bottom:1px solid #f0f0ee;font-size:13.5px;cursor:pointer}
+.ngan .bb6 input{accent-color:var(--den);width:16px;height:16px}
+.ngan .bb6 i{font-style:normal;width:20px;height:20px;border-radius:50%;border:1.5px solid #ccc;display:grid;place-items:center;font-size:10.5px;font-weight:700}
+.ngan .bb6 label.x i{background:var(--den);border-color:var(--den);color:#fff}
+.ngan .bb6 a{font-size:12px;font-weight:700;text-decoration:none;color:var(--den)}
+.ngan .xp{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.ngan .xp button{justify-content:flex-start}
+.ngan .tien3{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.ngan .tien3 div{background:#F4F4F2;border-radius:8px;padding:8px 10px}
+.ngan .tien3 small{display:block;font-size:10.5px;color:var(--xam);text-transform:uppercase;letter-spacing:1px}
+.ngan .tien3 b{font-size:14px}
+
+/* ---------- xem truoc ---------- */
+.xem{position:sticky;top:78px}
+.xbar{display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap}
+.xbar b{font-size:12px;letter-spacing:1.6px;text-transform:uppercase;margin-right:auto}
+.giay{background:#E9E9E6;border-radius:var(--r);padding:22px;max-height:calc(100vh - 140px);overflow:auto}
+.doc{width:210mm;min-height:297mm;margin:0 auto;background:#fff;box-shadow:0 2px 18px rgba(0,0,0,.12);padding:18mm 18mm 20mm;color:#111;font:10.5pt/1.6 Arimo,Arial,sans-serif;transform-origin:top center}
+@media(max-width:1500px){.doc{zoom:.82}}
+@media(max-width:1180px){.xem{position:static}.giay{max-height:none}.doc{zoom:.7}}
+
+/* van ban hop dong */
+.doc h1,.doc h2,.doc h3{font-family:Arimo,Arial,sans-serif}
+.hd-qg{text-align:center;font-weight:700;font-size:11pt;line-height:1.45}
+.hd-qg span{display:block;font-weight:600;text-decoration:underline;text-underline-offset:3px;font-size:10.5pt}
+.hd-t{text-align:center;margin:18pt 0 2pt;font-size:16pt;font-weight:700;letter-spacing:1px}
+.hd-so{text-align:center;font-style:italic;margin-bottom:12pt}
+.doc .cc{font-style:italic;margin:0 0 3pt 0}
+.doc p{margin:0 0 5pt}
+.doc .dieu{font-weight:700;margin:12pt 0 5pt;text-transform:uppercase;font-size:10.5pt}
+.doc .ben{font-weight:700;margin:10pt 0 4pt;text-transform:uppercase}
+.doc table.tt{border-collapse:collapse;width:100%}
+.doc table.tt td{padding:2pt 0;vertical-align:top}
+.doc table.tt td:first-child{width:36%}
+.doc table.bang{border-collapse:collapse;width:100%;margin:6pt 0 8pt;font-size:10pt}
+.doc table.bang th,.doc table.bang td{border:1px solid #333;padding:5pt 7pt;vertical-align:top}
+.doc table.bang th{background:#111;color:#fff;font-weight:700;text-align:left}
+.doc table.bang td.s{text-align:right;white-space:nowrap}
+.doc table.bang tr.t td{font-weight:700;background:#F2F2F2}
+.doc ul{margin:0 0 0 14pt}
+.doc li{margin:0 0 1pt}
+.doc .ky{display:grid;grid-template-columns:1fr 1fr;text-align:center;margin-top:22pt;font-weight:700;page-break-inside:avoid}
+.doc .ky small{display:block;font-weight:400;font-style:italic;margin-bottom:62pt}
+
+/* bao gia */
+.bg .hero{background:#0B0B0B;color:#fff;margin:-18mm -18mm 0;padding:16mm 18mm 12mm;border-radius:0 0 18px 18px}
+.bg .hero .k{font-size:9pt;letter-spacing:3px;text-transform:uppercase;color:#bbb}
+.bg .hero h1{font-size:30pt;letter-spacing:2px;margin:4pt 0 6pt;font-weight:700}
+.bg .hero .m{display:flex;gap:22pt;font-size:9.5pt;color:#ddd;flex-wrap:wrap}
+.bg .hero .m b{display:block;color:#fff;font-size:10.5pt}
+.bg .ben2{display:grid;grid-template-columns:1fr 1fr;gap:10pt;margin:14pt 0}
+.bg .bx{border:1px solid #E2E2E2;border-radius:10px;padding:10pt 12pt;font-size:9.5pt}
+.bg .bx .k{font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:#777;margin-bottom:4pt}
+.bg .bx b{font-size:11pt}
+.bg .gb{border:1px solid #E2E2E2;border-radius:10px;padding:10pt 12pt;margin-bottom:8pt;display:grid;grid-template-columns:26pt 1fr auto;gap:10pt;page-break-inside:avoid}
+.bg .gb .bd{width:24pt;height:24pt;border-radius:50%;background:#0B0B0B;color:#fff;display:grid;place-items:center;font-weight:700}
+.bg .gb h4{font-size:11pt;margin:2pt 0 3pt}
+.bg .gb .gia{font-weight:700;font-size:11pt;white-space:nowrap}
+.bg .gb table{width:100%;border-collapse:collapse;font-size:9pt;margin-top:3pt}
+.bg .gb td{padding:2pt 0;border-bottom:1px dotted #ddd}
+.bg .gb td.s{text-align:right;color:#555;white-space:nowrap;padding-left:8pt}
+.bg .tong{background:#0B0B0B;color:#fff;border-radius:10px;padding:12pt 14pt;margin:10pt 0;page-break-inside:avoid}
+.bg .tong .r{display:flex;justify-content:space-between;font-size:10pt;padding:2pt 0;color:#ccc}
+.bg .tong .r.l{font-size:14pt;color:#fff;font-weight:700;border-top:1px solid #333;margin-top:5pt;padding-top:7pt}
+.bg .tong .chu{font-style:italic;font-size:9pt;color:#aaa;margin-top:3pt}
+.bg .tong .dot{margin-top:8pt;border-top:1px solid #333;padding-top:6pt;font-size:9.5pt;color:#ddd}
+.bg h3{font-size:10pt;letter-spacing:2px;text-transform:uppercase;margin:14pt 0 6pt}
+.bg .c3{display:grid;grid-template-columns:repeat(3,1fr);gap:8pt;page-break-inside:avoid}
+.bg .c3>div{border:1px solid #E2E2E2;border-radius:10px;padding:9pt 10pt;font-size:9pt}
+.bg .c3 b{display:block;font-size:8.5pt;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4pt}
+.bg .c3 ul{margin-left:11pt}
+.bg .qt{display:grid;grid-template-columns:22pt 1fr auto;gap:8pt;padding:6pt 0;border-bottom:1px solid #eee;font-size:9.5pt;align-items:center}
+.bg .qt i{font-style:normal;width:20pt;height:20pt;border-radius:50%;border:1.5px solid #0B0B0B;display:grid;place-items:center;font-weight:700;font-size:8.5pt}
+.bg .cam{background:#0B0B0B;color:#fff;text-align:center;border-radius:10px;padding:12pt;margin-top:14pt;font-weight:700;letter-spacing:2px;font-size:10pt}
+
+/* dinh huong */
+.dh .bia{background:#0B0B0B;color:#fff;margin:-18mm -18mm 14pt;padding:20mm 18mm 14mm}
+.dh .bia .k{font-size:9pt;letter-spacing:3px;text-transform:uppercase;color:#aaa}
+.dh .bia h1{font-size:34pt;margin:8pt 0 4pt;line-height:1.05}
+.dh .bia p{color:#ccc;font-size:10pt}
+.dh h2{font-size:10.5pt;letter-spacing:2px;text-transform:uppercase;margin:16pt 0 7pt;padding-bottom:4pt;border-bottom:2px solid #0B0B0B;display:flex;gap:8pt}
+.dh h2 span{color:#888}
+.dh .kv{display:grid;grid-template-columns:120pt 1fr;gap:4pt 12pt;font-size:10pt}
+.dh .kv b{font-weight:600;color:#555}
+.dh .dv{font-size:13pt;line-height:1.5;border-left:4px solid #0B0B0B;padding:4pt 0 4pt 12pt;margin:6pt 0}
+.dh .gt{display:grid;grid-template-columns:repeat(3,1fr);gap:8pt}
+.dh .gt div{border:1px solid #E2E2E2;border-radius:8px;padding:8pt 10pt}
+.dh .gt b{display:block;font-size:10.5pt}
+.dh .gt small{color:#666;font-size:9pt}
+.dh .tc2{display:grid;grid-template-columns:90pt 1fr 90pt;gap:8pt;align-items:center;font-size:9pt;margin-bottom:5pt}
+.dh .tc2 span:last-child{text-align:right}
+.dh .tc2 .ln{height:6pt;background:#EEE;border-radius:9pt;position:relative}
+.dh .tc2 .ln i{position:absolute;top:50%;width:12pt;height:12pt;border-radius:50%;background:#0B0B0B;transform:translate(-50%,-50%)}
+.dh .tagd{display:flex;flex-wrap:wrap;gap:5pt}
+.dh .tagd span{border:1px solid #0B0B0B;border-radius:99pt;padding:2pt 9pt;font-size:9pt}
+.dh .mauc{display:flex;gap:8pt}
+.dh .mauc div{flex:1;border-radius:8px;height:60pt;display:flex;align-items:flex-end;padding:5pt 7pt;font-size:8.5pt;font-weight:700}
+.dh .mbd{display:grid;grid-template-columns:repeat(3,1fr);gap:6pt}
+.dh .mbd div{aspect-ratio:4/3;background:#eee center/cover;border-radius:6px}
+.dh .sl{font-size:12pt;font-weight:700;margin:3pt 0}
+
+.doc.hb .bien{background:#FFF1A8;box-shadow:0 0 0 1px #F2D95B;border-radius:2px}
+.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,90px);background:var(--den);color:#fff;border-radius:9px;padding:10px 16px;font-size:13px;transition:.25s;z-index:30}
+.toast.on{transform:translate(-50%,0)}
+
+@media print{
+  @page{size:A4;margin:14mm 0 16mm}
+  @page:first{margin-top:0}
+  .doc{padding:18mm 18mm 0!important}
+  .doc h2,.doc h3,.doc .dieu{break-after:avoid;page-break-after:avoid}
+  .doc li,.doc tr,.bg .qt{break-inside:avoid}
+  .bien{background:none!important;box-shadow:none!important}
+  .doc table.bang{break-inside:avoid;page-break-inside:avoid}
+  body{background:#fff}
+  .sb,.top,.form,.xbar,.toast{display:none!important}
+  .app,.wrap{display:block;padding:0}
+  .xem{position:static}
+  .giay{background:none;padding:0;max-height:none;overflow:visible;border-radius:0}
+  .doc{box-shadow:none;zoom:1!important;margin:0;width:auto;min-height:0}
+  .bg .hero,.dh .bia,.bg .tong,.bg .cam,.doc table.bang th,.bg .gb .bd{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="sb" id="sb"></aside>
+  <main>
+    <div class="top">
+      <h1 id="tieuDe">Tổng quan<small id="phuDe"></small></h1>
+      <span id="topR" style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"></span>
+      <span class="luu" id="luu"></span>
+    </div>
+    <div id="vDash" class="dash"></div>
+    <div id="vWs" class="wrap" hidden>
+      <div class="form" id="form"></div>
+      <div class="xem">
+        <div class="xbar"><b id="tenTL">Xem trước</b>
+          <button class="nut v nho" id="chepVB">Chép chữ</button>
+          <button class="nut v nho" id="taiWord">⤓ Word</button>
+          <button class="nut nho" id="inPDF">In / Lưu PDF</button></div>
+        <div class="giay"><div class="doc" id="doc"></div></div>
+      </div>
+    </div>
+  </main>
+</div>
+<input type="file" id="khoiPhuc" accept=".json" hidden>
+<div class="man" id="man"></div><aside class="ngan" id="ngan"></aside>
+<div class="toast" id="toast"></div>
+
+<script>
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const nl = s => esc(s).replace(/\n/g, '<br>');
+const tien = n => (Math.round(+n || 0)).toLocaleString('vi-VN').replace(/,/g, '.');
+const soTien = s => +String(s).replace(/[^\d]/g, '') || 0;
+const KEY = 'branding-ws-v1';
+const TT = {tiemnang:'Tiềm năng', baogia:'Đang báo giá', kyhd:'Đã ký hợp đồng', thietke:'Đang thiết kế', bangiao:'Đang bàn giao', xong:'Hoàn tất', dung:'Tạm dừng / huỷ'};
+const STEPS = [['kh','Thông tin khách hàng','Hồ sơ dự án, thông tin hai bên'],['brief','Bảng thu thập thông tin','Brief: hiểu khách hàng trước khi báo giá'],['bg','Checklist báo giá','Chọn hạng mục, ra báo giá gửi khách'],['hd','Hợp đồng','Hợp đồng dịch vụ chuyên gia'],['dh','Định hướng thương hiệu','Chiến lược, định vị, cá tính, hình ảnh'],['giao','Bàn giao','Nghiệm thu, bàn giao file, thu tiền']];
+
+/* ---------- ben B mac dinh ---------- */
+const CG = {ten:'Nguyễn Quốc Khánh', danh:'Chuyên gia tư vấn & thiết kế thương hiệu', cccd:'', dc:'', dt:'0988 886 901', email:'hi@nguyenquockhanh.vn', stk:'', nh:''};
+
+/* ---------- danh muc hang muc (gia tham khao, sua duoc) ---------- */
+const DM = [
+  ['Chiến lược', [
+    ['Định hướng sáng tạo (creative direction)', 2000000, 'gói'],
+    ['Nghiên cứu & chiến lược thương hiệu', 0, 'gói'],
+    ['Đặt tên thương hiệu / slogan', 0, 'gói']]],
+  ['Logo & nhận diện', [
+    ['Thiết kế logo', 9000000, 'bộ'],
+    ['Quy chuẩn sử dụng logo (logo guideline)', 3000000, 'bộ'],
+    ['Logo & Brand Guideline trọn gói', 25000000, 'gói'],
+    ['Hệ hoa văn / họa tiết thương hiệu', 0, 'bộ']]],
+  ['Ấn phẩm', [
+    ['Ấn phẩm văn phòng (danh thiếp, tiêu đề thư, bìa thư…)', 500000, 'món'],
+    ['Hồ sơ năng lực (company profile)', 300000, 'trang'],
+    ['Ấn phẩm số (avatar, cover, mẫu bài đăng…)', 6500000, 'bộ'],
+    ['Catalogue / brochure', 0, 'trang']]],
+  ['Bao bì', [
+    ['Concept bao bì chính thức', 7500000, 'concept'],
+    ['Phiên bản triển khai thêm', 2500000, 'phiên bản'],
+    ['Túi giấy', 1000000, 'mẫu'],
+    ['Ly giấy', 500000, 'mẫu']]],
+  ['Digital & website', [
+    ['Thiết kế website', 18000000, 'gói'],
+    ['SEO & content marketing', 4500000, 'tháng'],
+    ['Quản trị & đăng bài Facebook', 3500000, 'tháng']]]
+];
+const CUNGCAP = ['Thông tin pháp lý doanh nghiệp (tên, MST, địa chỉ)', 'Logo, tài liệu nhận diện hiện có (nếu có)', 'Hình ảnh sản phẩm / dịch vụ', 'Nội dung chữ cho các ấn phẩm', 'Thông tin liên hệ, fanpage, website', 'Đối thủ và thương hiệu tham khảo', 'Mẫu thiết kế yêu thích / không thích', 'Người phụ trách duyệt thiết kế'];
+const BAOGOM = ['File thiết kế gốc (AI, PDF) và file dùng ngay (PNG, JPG)', 'Tối đa 03 lần chỉnh sửa mỗi hạng mục', 'Tư vấn triển khai, làm việc với nhà in', 'Hướng dẫn sử dụng file bàn giao'];
+const KHONGGOM = ['Chi phí in ấn, sản xuất', 'Bản quyền hình ảnh, font chữ trả phí', 'Chụp ảnh sản phẩm', 'Đăng ký bảo hộ nhãn hiệu', 'Thuế, phí phát sinh ngoài hợp đồng'];
+const QUYTRINH = [['Tiếp nhận brief, thống nhất phạm vi', '1–2 ngày'], ['Nghiên cứu & định hướng sáng tạo', '3–5 ngày'], ['Thiết kế phương án đề xuất', '7–10 ngày'], ['Chỉnh sửa theo góp ý', '5–7 ngày'], ['Hoàn thiện & bàn giao', '2–3 ngày']];
+const TCACH = [['Truyền thống','Hiện đại'], ['Nghiêm túc','Vui tươi'], ['Bình dân','Cao cấp'], ['Mộc mạc','Tinh xảo'], ['Trầm lắng','Năng động'], ['Tối giản','Phong phú']];
+const TUKHOA = ['Tin cậy','Bền vững','Tự nhiên','Tinh tế','Sáng tạo','Gần gũi','Chuyên nghiệp','Bản địa','Di sản','Trẻ trung','Sang trọng','Ấm áp','Mạnh mẽ','Chân thật','Đổi mới'];
+const FONTHUONG = ['Serif cổ điển','Sans hiện đại','Sans hình học','Chữ viết tay','Slab','Display cá tính'];
+
+/* ---------- du an ---------- */
+const hom = () => new Date().toISOString().slice(0, 10);
+function soHD(ngay){ const [y,m,d] = ngay.split('-'); return `${d}${m}${y.slice(2)}/BRANDING`; }
+function moiDA(){
+  const n = hom();
+  return { id: 'da' + Date.now() + Math.random().toString(36).slice(2, 6), ten: 'Dự án mới', ngay: n, so: soMoi(n), hieuluc: '30 ngày',
+    tt: 'tiemnang', xong: {}, hanChot: '', xep: null, linhVuc: '', nguon: '', ghiChuDA: '', tao: Date.now(), capNhat: Date.now(),
+    br: {hm: []}, giao: {items: [], ngay: '', thu: [], doc: 'bb', ghiChu: ''},
+    kh: {loai:'tc', cty:'', dd:'', cv:'', mst:'', dc:'', dt:'', email:''},
+    b: {...CG}, veViec: '', noiKy: '', toaAn: 'TP. Đà Nẵng', thue: 'chua', portfolio: true,
+    goi: [],
+    vat: 0, dot: [{pt:70, dk:'Ngay sau khi ký hợp đồng / xác nhận báo giá'}, {pt:30, dk:'Khi bàn giao file hoàn chỉnh'}],
+    tg: '20', sua: '03', banGiao: 'AI, PDF, PNG, JPG',
+    cc: CUNGCAP.slice(0, 5), bao: [...BAOGOM], khong: [...KHONGGOM], qt: QUYTRINH.map(x => [...x]),
+    dh: {ten:'', nganh:'', boiCanh:'', doiTuong:'', insight:'', tamNhin:'', suMenh:'', gt:[['',''],['',''],['','']],
+      tc:[50,50,50,50,50,50], dvDoiTuong:'', dvNganh:'', dvLoiIch:'', dvLyDo:'', slogan:'', tk:[], mau:['#0B0B0B','#FFFFFF','#B8B8B8'], font:[], doiThu:'', ghiChu:'', mb:[]}
+  };
+}
+let DS = [], P = null;
+function soMoi(n){ let so = soHD(n), k = 1; while (DS.some(d => d.so === so)){ k++; so = soHD(n).replace('/', '-' + k + '/'); } return so; }
+function chuanHoa(d){ const m = moiDA();
+  Object.keys(m).forEach(k => { if (d[k] === undefined) d[k] = m[k]; });
+  if (!d.b || d.b.cty !== undefined) d.b = {...CG};
+  if (!d.kh.loai) d.kh.loai = 'tc'; d.vat = 0;
+  if (/ngày/.test(String(d.tg))) d.tg = String(d.tg).replace(/\D+/g, '') || '20';
+  d.goi.forEach(g => { if (g.mo === undefined) g.mo = ''; if (g.tl === undefined) g.tl = ''; });
+  if (!d.br.hm) d.br.hm = []; if (!d.giao.thu) d.giao.thu = [];
+  return d; }
+/* IndexedDB: chua duoc hang tram du an kem anh moodboard */
+const KHO = { db: null,
+  mo(){ return new Promise(ok => { try { const r = indexedDB.open('branding-ws', 1);
+    r.onupgradeneeded = () => r.result.createObjectStore('da', {keyPath: 'id'});
+    r.onsuccess = () => { this.db = r.result; ok(true); }; r.onerror = () => ok(false); } catch(e){ ok(false); } }); },
+  tx(m){ return this.db.transaction('da', m).objectStore('da'); },
+  tatCa(){ return new Promise(ok => { if (!this.db) return ok(JSON.parse(localStorage.getItem(KEY + '-ds') || '[]'));
+    const r = this.tx('readonly').getAll(); r.onsuccess = () => ok(r.result || []); r.onerror = () => ok([]); }); },
+  ghi(d){ if (!this.db){ try { localStorage.setItem(KEY + '-ds', JSON.stringify(DS)); } catch(e){ return Promise.reject(e); } return Promise.resolve(); }
+    return new Promise((ok, loi) => { const r = this.tx('readwrite').put(JSON.parse(JSON.stringify(d))); r.onsuccess = ok; r.onerror = () => loi(r.error); }); },
+  xoa(id){ if (!this.db){ localStorage.setItem(KEY + '-ds', JSON.stringify(DS)); return Promise.resolve(); }
+    return new Promise(ok => { const r = this.tx('readwrite').delete(id); r.onsuccess = ok; r.onerror = ok; }); }
+};
+async function nap(){
+  await KHO.mo(); DS = await KHO.tatCa();
+  if (!DS.length){ try { const o = JSON.parse(localStorage.getItem(KEY)); if (o && o.ds){ DS = o.ds; for (const d of DS){ chuanHoa(d); await KHO.ghi(d); } } } catch(e){} }
+  DS.forEach(chuanHoa);
+}
+let hl; function luu(){ if (!P) return; P.capNhat = Date.now(); $('#luu').textContent = 'Đang lưu…'; clearTimeout(hl); const d = P; hl = setTimeout(() => {
+  KHO.ghi(d).then(() => $('#luu').textContent = 'Đã lưu ' + new Date().toLocaleTimeString('vi-VN', {hour:'2-digit', minute:'2-digit'}))
+    .catch(() => $('#luu').textContent = 'Không lưu được — hãy Sao lưu ra file'); }, 350); }
+function veDS(){ veSB(); }
+
+/* ---------- tinh tien ---------- */
+const giaGoi = g => g.tay !== '' && g.tay != null ? soTien(g.tay) : g.it.reduce((s, i) => s + (+i.sl || 0) * (+i.dg || 0), 0);
+function tongTien(){ const t = P.goi.reduce((s, g) => s + giaGoi(g), 0), v = Math.round(t * (+P.vat || 0) / 100); return {t, v, c: t + v}; }
+function docSo(n){
+  n = Math.round(n); if (!n) return 'Không đồng';
+  const cs = ['không','một','hai','ba','bốn','năm','sáu','bảy','tám','chín'];
+  const ba = (x, du) => { const tr = Math.floor(x / 100), ch = Math.floor(x % 100 / 10), dv = x % 10; let r = [];
+    if (du || tr) r.push(cs[tr] + ' trăm');
+    if (ch > 1) r.push(cs[ch] + ' mươi'); else if (ch === 1) r.push('mười'); else if ((du || tr) && dv) r.push('lẻ');
+    if (dv) r.push(dv === 1 && ch > 1 ? 'mốt' : dv === 5 && ch ? 'lăm' : dv === 4 && ch > 1 ? 'tư' : cs[dv]);
+    return r.join(' '); };
+  const dvi = ['', ' nghìn', ' triệu', ' tỷ']; let nhom = [], i = 0;
+  while (n > 0){ nhom.push(n % 1000); n = Math.floor(n / 1000); }
+  let r = [];
+  for (i = nhom.length - 1; i >= 0; i--){ if (!nhom[i]) continue; r.push(ba(nhom[i], i < nhom.length - 1) + dvi[i % 4] + (i >= 4 ? ' tỷ' : '')); }
+  const s = r.join(' ').replace(/\s+/g, ' ').trim();
+  return s.charAt(0).toUpperCase() + s.slice(1) + ' đồng';
+}
+const ngayVN = s => { const [y,m,d] = (s || hom()).split('-'); return `ngày ${d} tháng ${m} năm ${y}`; };
+
+/* ---------- cac trang ---------- */
+let VIEW = 'kh', BIEN = true;
+const TEN = {kh:['Khách hàng & dự án','Điền một lần, dùng cho hợp đồng, báo giá và định hướng'], hd:['Soạn hợp đồng','Hợp đồng dịch vụ chuyên gia · tư vấn & thiết kế thương hiệu'], bg:['Checklist & báo giá','Tích hạng mục, ra báo giá gửi khách'], dh:['Định hướng thương hiệu','Chiến lược, định vị, cá tính và ngôn ngữ hình ảnh']};
+const f = (lab, path, o = {}) => `<div class="f"><label>${lab}</label>${o.ta ? `<textarea data-p="${path}" rows="${o.ta}" placeholder="${esc(o.ph || '')}"></textarea>` : `<input data-p="${path}" ${o.type ? `type="${o.type}"` : ''} placeholder="${esc(o.ph || '')}">`}</div>`;
+function layP(path){ return path.split('.').reduce((o, k) => o?.[k], P); }
+function datP(path, v){ const ks = path.split('.'), l = ks.pop(); ks.reduce((o, k) => o[k], P)[l] = v; }
+
+function formKH(){
+  const cn = P.kh.loai === 'cn';
+  return `<div class="card"><h3><span class="so">1</span>Dự án</h3>
+      ${f('Tên dự án (dùng cho "Về việc")', 'ten', {ph:'VD: Tư vấn, thiết kế thương hiệu rượu sim Hải Lăng'})}
+      <div class="g2"><div class="f"><label>Trạng thái</label><select data-p="tt">${Object.entries(TT).map(([k, v]) => `<option value="${k}">${v}</option>`).join('')}</select></div>${f('Lĩnh vực', 'linhVuc', {ph:'VD: F&B, mỹ phẩm, giáo dục'})}</div>
+      <div class="g2">${f('Hạn chót bàn giao', 'hanChot', {type:'date'})}${f('Nguồn khách', 'nguon', {ph:'Giới thiệu, fanpage, Fiverr…'})}</div>
+      ${f('Ghi chú nội bộ', 'ghiChuDA', {ta:2})}
+      <div class="g2">${f('Ngày ký', 'ngay', {type:'date'})}${f('Số hợp đồng', 'so')}</div>
+      <div class="g2">${f('Nơi ký (tuỳ chọn)', 'noiKy', {ph:'VD: TP. Đà Nẵng'})}${f('Toà án giải quyết tranh chấp', 'toaAn')}</div></div>
+    <div class="card"><h3>Bên A · Khách hàng</h3>
+      <div class="f"><label>Loại khách hàng</label><select data-p="kh.loai"><option value="tc">Doanh nghiệp / tổ chức</option><option value="hkd">Hộ kinh doanh</option><option value="cn">Cá nhân</option></select></div>
+      ${f(cn ? 'Họ và tên' : 'Tên doanh nghiệp / hộ kinh doanh', 'kh.cty')}
+      ${cn ? '' : `<div class="g2">${f('Người đại diện', 'kh.dd', {ph:'Ông/Bà …'})}${f('Chức vụ', 'kh.cv')}</div>`}
+      <div class="g2">${f(cn ? 'Số CCCD' : 'Mã số thuế', 'kh.mst')}${f('Điện thoại', 'kh.dt')}</div>
+      ${f('Email', 'kh.email')}${f('Địa chỉ', 'kh.dc', {ta:2})}</div>
+    <div class="card"><h3>Bên B · Chuyên gia <small>không ghi thông tin công ty</small></h3>
+      <div class="g2">${f('Họ và tên', 'b.ten')}${f('Số CCCD', 'b.cccd')}</div>
+      ${f('Chức danh chuyên môn', 'b.danh')}
+      <div class="g2">${f('Điện thoại', 'b.dt')}${f('Email', 'b.email')}</div>
+      ${f('Địa chỉ', 'b.dc', {ta:2})}
+      <div class="g2">${f('Số tài khoản (cá nhân)', 'b.stk')}${f('Ngân hàng, chi nhánh', 'b.nh')}</div></div>`;
+}
+
+function formGoi(){
+  const g = P.goi.map((g, gi) => `<div class="gc"><div class="gh"><span class="bd">${gi + 1}</span>
+      <input value="${esc(g.ten)}" data-g="${gi}" data-k="ten" placeholder="Tên hạng mục / mục"><span class="tong">${tien(giaGoi(g))}</span><button class="x" data-xg="${gi}" title="Xoá">✕</button></div>
+      ${g.it.map((it, ii) => `<div class="it"><input value="${esc(it.ten)}" data-g="${gi}" data-i="${ii}" data-k="ten" placeholder="Nội dung">
+        <input class="so" value="${it.sl}" data-g="${gi}" data-i="${ii}" data-k="sl" title="Số lượng">
+        <input class="so" value="${tien(it.dg)}" data-g="${gi}" data-i="${ii}" data-k="dg" title="Đơn giá">
+        <button class="x" data-xi="${gi}.${ii}" title="Xoá">✕</button></div>`).join('')}
+      <div class="gf" style="display:block"><textarea data-g="${gi}" data-k="mo" rows="2" placeholder="Mô tả thêm, mỗi dòng một ý (VD: 03 phương án ban đầu · Tối đa 05 lần chỉnh sửa)" style="width:100%;border:1px solid var(--vien);border-radius:6px;padding:6px 8px;font-size:12.5px">${esc(g.mo)}</textarea></div>
+      <div class="gf"><button class="nut v nho" data-ti="${gi}">＋ Nội dung</button>
+        <label>Thời gian <input type="text" value="${esc(g.tl)}" data-g="${gi}" data-k="tl" placeholder="VD: 5 ngày" style="width:90px;text-align:left"></label>
+        <label>Giá nhập tay <input type="text" value="${esc(g.tay)}" data-g="${gi}" data-k="tay" placeholder="tự cộng"></label></div></div>`).join('');
+  return `<div class="card"><h3><span class="so">₫</span>Hạng mục &amp; chi phí <small>mỗi hạng mục 1 dòng, chỉ hiện giá hạng mục</small></h3>${g}
+      <button class="nut v nho" id="themGoi">＋ Thêm hạng mục</button>
+      <div class="g2" style="margin-top:12px"><div class="f"><label>Thuế thu nhập cá nhân</label><select data-p="thue"><option value="chua">Chưa bao gồm thuế TNCN</option><option value="da">Đã bao gồm, Bên A khấu trừ theo quy định</option><option value="khong">Không ghi</option></select></div>
+      <div class="f"><label>Tổng giá trị</label><div style="font-weight:700;font-size:17px;padding-top:6px">${tien(tongTien().c)} đ</div></div></div></div>`;
+}
+
+function formTT(){
+  return `<div class="card"><h3>Thanh toán &amp; tiến độ</h3>
+      ${P.dot.map((d, i) => `<div class="dong"><input value="${d.pt}" data-dot="${i}" data-k="pt" title="%"><input value="${esc(d.dk)}" data-dot="${i}" data-k="dk" placeholder="Mốc thanh toán"><button class="x" data-xd="${i}">✕</button></div>`).join('')}
+      <button class="nut v nho" id="themDot">＋ Đợt thanh toán</button>
+      <div class="goi" style="margin-top:6px">Tổng tỷ lệ: <b>${P.dot.reduce((s, d) => s + (+d.pt || 0), 0)}%</b> · mẫu thường dùng: 70/30, 50/50, 30/40/30, 100%</div>
+      <div class="g2" style="margin-top:12px">${f('Thời gian thực hiện (ngày làm việc)', 'tg')}${f('Số lần chỉnh sửa (báo giá)', 'sua')}</div>
+      ${f('Định dạng file bàn giao', 'banGiao')}
+      <div class="ck"><label><input type="checkbox" data-bool="portfolio" ${P.portfolio ? 'checked' : ''}>Chuyên gia được dùng hình ảnh sản phẩm đã công bố làm hồ sơ năng lực (portfolio)</label></div></div>`;
+}
+
+const dsCk = (ten, key, goc) => `<div class="card ck"><h3>${ten}</h3>
+    ${[...new Set([...goc, ...P[key]])].map(x => `<label><input type="checkbox" data-ck="${key}" value="${esc(x)}" ${P[key].includes(x) ? 'checked' : ''}>${esc(x)}</label>`).join('')}
+    <div class="them"><input placeholder="Thêm mục khác…" data-them="${key}"><button class="nut v nho" data-themb="${key}">Thêm</button></div></div>`;
+
+function formHD(){ return formGoi() + formTT() + `<div class="card"><h3>Chuẩn hoá từ 16 hợp đồng cũ <small><button class="nut v nho" id="batBien">${BIEN ? 'Ẩn' : 'Tô'} phần thay đổi</button></small></h3>
+  <div class="goi" style="line-height:1.6"><b style="color:#111">Phần thay đổi theo từng dự án</b> (tô vàng trong bản xem trước): số hợp đồng, về việc, ngày và nơi ký, thông tin Bên A, bảng hạng mục và chi phí, tổng tiền và số tiền bằng chữ, các đợt thanh toán và mốc, thời gian thực hiện, file bàn giao, tài khoản thụ hưởng, toà án.<br>
+  <b style="color:#111">Phần cố định</b>: căn cứ pháp lý, điều khoản gia hạn và bàn giao (1.2–1.3), ghi chú giá cố định (2.1), trách nhiệm hai bên (Điều 3), nghiệm thu (Điều 4), xử lý phát sinh và bảng chi phí khi huỷ 30/40/50% (Điều 5), tranh chấp (Điều 6), điều khoản chung (Điều 7).<br>
+  <b style="color:#111">Đã chỉnh cho hợp đồng chuyên gia</b>: bỏ thông tin công ty, Bên B là cá nhân chuyên gia độc lập (CCCD, tài khoản cá nhân), bỏ VAT và hoá đơn GTGT, thêm lựa chọn thuế TNCN, thêm khoản "không phát sinh quan hệ lao động" và quyền dùng portfolio.</div></div>`; }
+
+function formBG(){
+  const dm = DM.map(([nh, ds]) => `<h4>${nh}</h4>` + ds.map(([t, g, dv]) => {
+    const co = P.goi.some(x => x.it.some(i => i.ten === t));
+    return `<label><input type="checkbox" data-dm="${esc(t)}" data-gia="${g}" data-dv="${dv}" data-nh="${esc(nh)}" ${co ? 'checked' : ''}><span>${esc(t)}</span><em>${g ? tien(g) + ' đ/' + dv : 'nhập giá'}</em></label>`; }).join('')).join('');
+  return `<div class="card dm"><h3><span class="so">✓</span>Checklist hạng mục <small>giá tham khảo, sửa được</small></h3>${dm}
+      <div class="goi" style="margin-top:8px">Tích để thêm vào gói cùng nhóm; bỏ tích để gỡ. Chỉnh số lượng, đơn giá ở phần Gói dịch vụ bên dưới.</div></div>`
+    + formGoi() + formTT()
+    + dsCk('Khách hàng cần cung cấp', 'cc', CUNGCAP) + dsCk('Bao gồm', 'bao', BAOGOM) + dsCk('Không bao gồm', 'khong', KHONGGOM)
+    + `<div class="card"><h3>Quy trình làm việc</h3>${P.qt.map((q, i) => `<div class="dong b3"><input value="${esc(q[0])}" data-qt="${i}" data-k="0"><input value="${esc(q[1])}" data-qt="${i}" data-k="1"><button class="x" data-xq="${i}">✕</button></div>`).join('')}
+      <button class="nut v nho" id="themQT">＋ Bước</button>${`<div style="margin-top:12px">` + f('Hiệu lực báo giá', 'hieuluc') + '</div>'}</div>`;
+}
+function formDH(){
+  const d = P.dh;
+  return `<div class="card"><h3><span class="so">1</span>Bối cảnh</h3>
+      <div class="g2">${f('Tên thương hiệu', 'dh.ten', {ph: P.kh.cty || 'Tên thương hiệu'})}${f('Ngành / lĩnh vực', 'dh.nganh')}</div>
+      ${f('Bối cảnh & vấn đề hiện tại', 'dh.boiCanh', {ta:3})}${f('Khách hàng mục tiêu', 'dh.doiTuong', {ta:2})}${f('Thấu hiểu khách hàng (insight)', 'dh.insight', {ta:2})}${f('Đối thủ / thương hiệu tham khảo', 'dh.doiThu', {ta:2})}</div>
+    <div class="card"><h3><span class="so">2</span>Nền tảng thương hiệu</h3>
+      ${f('Tầm nhìn', 'dh.tamNhin', {ta:2})}${f('Sứ mệnh', 'dh.suMenh', {ta:2})}
+      <div class="f"><label>Giá trị cốt lõi (tên · diễn giải)</label>${d.gt.map((g, i) => `<div class="dong b3" style="grid-template-columns:130px 1fr"><input value="${esc(g[0])}" data-gt="${i}" data-k="0" placeholder="Giá trị ${i+1}"><input value="${esc(g[1])}" data-gt="${i}" data-k="1" placeholder="Diễn giải ngắn"></div>`).join('')}</div></div>
+    <div class="card"><h3><span class="so">3</span>Định vị</h3>
+      <div class="goi" style="margin-bottom:8px">Dành cho <b>[khách hàng]</b>, <b>[thương hiệu]</b> là <b>[ngành]</b> mang đến <b>[lợi ích]</b> nhờ <b>[lý do tin tưởng]</b>.</div>
+      ${f('Dành cho', 'dh.dvDoiTuong')}${f('Là (ngành / hạng mục)', 'dh.dvNganh')}${f('Mang đến (lợi ích khác biệt)', 'dh.dvLoiIch', {ta:2})}${f('Nhờ (lý do tin tưởng)', 'dh.dvLyDo', {ta:2})}
+      ${f('Thông điệp / slogan đề xuất', 'dh.slogan', {ta:2, ph:'Mỗi dòng một phương án'})}</div>
+    <div class="card"><h3><span class="so">4</span>Cá tính thương hiệu</h3>
+      ${TCACH.map((t, i) => `<div class="tc"><span>${t[0]}</span><input type="range" min="0" max="100" value="${d.tc[i]}" data-tc="${i}"><span>${t[1]}</span></div>`).join('')}
+      <div class="f" style="margin-top:8px"><label>Từ khoá cảm xúc</label><div class="tag">${[...new Set([...TUKHOA, ...d.tk])].map(t => `<button data-tk="${esc(t)}" class="${d.tk.includes(t) ? 'on' : ''}">${esc(t)}</button>`).join('')}</div>
+      <div class="them"><input placeholder="Thêm từ khoá…" id="tkMoi"><button class="nut v nho" id="tkThem">Thêm</button></div></div></div>
+    <div class="card"><h3><span class="so">5</span>Ngôn ngữ hình ảnh</h3>
+      <div class="f"><label>Màu định hướng</label><div class="mau">${d.mau.map((m, i) => `<div class="o"><input type="color" value="${m}" data-mau="${i}"><input type="text" value="${m}" data-maut="${i}"></div>`).join('')}
+        ${d.mau.length < 6 ? '<button class="nut v nho" id="themMau">＋</button>' : ''}${d.mau.length > 1 ? '<button class="nut v nho" id="botMau">−</button>' : ''}</div></div>
+      <div class="f"><label>Hướng chữ</label><div class="tag">${FONTHUONG.map(t => `<button data-font="${t}" class="${d.font.includes(t) ? 'on' : ''}">${t}</button>`).join('')}</div></div>
+      <div class="f"><label>Moodboard (tối đa 6 ảnh)</label><div class="mb">${[0,1,2,3,4,5].map(i => d.mb[i] ? `<div class="o co" style="background-image:url(${d.mb[i]})"><button class="x" data-xmb="${i}">✕</button></div>` : `<div class="o" data-mbi="${i}">＋</div>`).join('')}</div><input type="file" id="fMb" accept="image/*" multiple hidden></div>
+      ${f('Ghi chú thêm', 'dh.ghiChu', {ta:3})}</div>`;
+}
+
+/* ---------- brief ---------- */
+const BRIEF = [
+ ['Doanh nghiệp', [['linhVuc','Lĩnh vực kinh doanh'],['namTL','Năm thành lập / quy mô'],['spChuLuc','Sản phẩm, dịch vụ chủ lực',2],['kenh','Website, fanpage, kênh bán hàng']]],
+ ['Mục tiêu dự án', [['lyDo','Vì sao cần làm thương hiệu lúc này?',2],['mucTieu','Kết quả mong đợi sau dự án',2],['deadline','Thời điểm cần hoàn thành'],['nganSach','Ngân sách dự kiến']]],
+ ['Khách hàng mục tiêu', [['chanDung','Chân dung khách hàng (tuổi, nghề, thu nhập, nơi sống)',2],['nhuCau','Họ cần gì, lo lắng gì khi mua',2],['noiMua','Họ biết đến và mua ở đâu']]],
+ ['Thị trường', [['doiThu','Đối thủ chính',2],['khacBiet','Điểm khác biệt so với đối thủ',2]]],
+ ['Thương hiệu hiện tại', [['hienTrang','Đã có logo, nhận diện chưa? Đang dùng thế nào',2],['giuLai','Điều muốn giữ lại'],['thayDoi','Điều muốn thay đổi']]],
+ ['Phong cách mong muốn', [['thich','Thương hiệu, mẫu yêu thích (dán link)',2],['khongThich','Điều không thích'],['mauSac','Màu sắc mong muốn / cần tránh']]],
+ ['Cách làm việc', [['nguoiDuyet','Người quyết định duyệt thiết kế'],['lienLac','Kênh liên lạc chính'],['ghiChu','Ghi chú khác',2]]]
+];
+const brTong = () => BRIEF.reduce((s, x) => s + x[1].length, 0);
+const brDien = d => BRIEF.reduce((s, x) => s + x[1].filter(([k]) => String(d.br[k] || '').trim()).length, 0);
+function formBrief(){
+  const n = brDien(P), t = brTong();
+  return `<div class="card"><h3><span class="so">2</span>Bảng thu thập thông tin <small>${n}/${t} câu đã có</small></h3>
+      <div class="goi">Hỏi khách trước khi báo giá. Có thể <b>chép bộ câu hỏi</b> gửi Zalo, hoặc <b>In / Lưu PDF</b> bản trống để khách điền.</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px"><button class="nut v nho" id="chepCH">Chép bộ câu hỏi</button><button class="nut v nho" id="sangDH">Đưa sang Định hướng →</button></div></div>
+    <div class="card ck"><h3>Hạng mục khách quan tâm</h3><div class="tag">${DM.map(([nh]) => nh).concat(['Đặt tên','Website','Bảo hộ nhãn hiệu']).map(t => `<button data-hm="${esc(t)}" class="${P.br.hm.includes(t) ? 'on' : ''}">${esc(t)}</button>`).join('')}</div></div>`
+    + BRIEF.map(([nh, ds], i) => `<div class="card"><h3>${String.fromCharCode(65 + i)} · ${nh}</h3>${ds.map(([k, l, ta]) => f(l, 'br.' + k, ta ? {ta} : {})).join('')}</div>`).join('');
+}
+function vbBrief(){
+  const A = P.kh;
+  return `<div class="hs"><div class="k">Bảng thu thập thông tin · Brief thương hiệu</div><h1>${esc(A.cty || P.ten || 'Khách hàng')}</h1><p>${esc(P.ten)} · Mã ${esc(P.so)}</p></div>
+  <div class="kv2"><b>Người liên hệ</b><span>${esc(A.dd || '—')}${A.cv ? ' · ' + esc(A.cv) : ''}</span><b>Điện thoại · Email</b><span>${esc(A.dt || '—')}${A.email ? ' · ' + esc(A.email) : ''}</span>
+    <b>Hạng mục quan tâm</b><span>${P.br.hm.length ? P.br.hm.map(esc).join(' · ') : '—'}</span></div>`
+    + BRIEF.map(([nh, ds], i) => `<h2 class="sec">${String.fromCharCode(65 + i)} · ${nh}</h2>` + ds.map(([k, l]) => `<div class="qa"><b>${l}</b>${String(P.br[k] || '').trim() ? nl(P.br[k]) : '<span class="tr"></span>'}</div>`).join('')).join('');
+}
+const cauHoi = () => `BẢNG THU THẬP THÔNG TIN THƯƠNG HIỆU\n${P.kh.cty || P.ten}\n\n` + BRIEF.map(([nh, ds], i) => `${String.fromCharCode(65 + i)}. ${nh.toUpperCase()}\n` + ds.map(([, l], j) => `${j + 1}. ${l}`).join('\n')).join('\n\n') + `\n\nCảm ơn anh/chị đã dành thời gian chia sẻ!\n${P.b.ten} · ${P.b.dt}`;
+
+/* ---------- ban giao & thanh toan ---------- */
+const TTG = {chua:'Chưa làm', dang:'Đang làm', gui:'Đã gửi', duyet:'Đã duyệt'};
+function dongBoGiao(){ P.giao.items = P.goi.map(g => ({ten: g.ten, tt: 'chua', link: ''})); }
+function daThu(d){ const T = tongTien().c; return P.dot.reduce((s, x, i) => s + (P.giao.thu[i]?.da ? T * x.pt / 100 : 0), 0); }
+function formGiao(){
+  if (!P.giao.items.length && P.goi.length) dongBoGiao();
+  const T = tongTien().c;
+  return `<div class="card giao"><h3><span class="so">6</span>Hạng mục bàn giao <small><button class="nut v nho" id="layHD">Lấy lại từ hợp đồng</button></small></h3>
+      ${P.giao.items.map((it, i) => `<div class="r"><select data-gi="${i}" data-k="tt">${Object.entries(TTG).map(([k, v]) => `<option value="${k}" ${it.tt === k ? 'selected' : ''}>${v}</option>`).join('')}</select>
+        <input value="${esc(it.ten)}" data-gi="${i}" data-k="ten" placeholder="Hạng mục"><button class="x" data-xgi="${i}">✕</button>
+        <span></span><input class="ln" value="${esc(it.link)}" data-gi="${i}" data-k="link" placeholder="Link file (Drive, Dropbox…)"></div>`).join('')}
+      <button class="nut v nho" id="themGi">＋ Hạng mục</button>
+      <div class="g2" style="margin-top:12px">${f('Ngày bàn giao', 'giao.ngay', {type:'date'})}${f('Ghi chú nghiệm thu', 'giao.ghiChu')}</div></div>
+    <div class="card"><h3>Theo dõi thanh toán <small>đã thu ${tien(daThu(P))} / ${tien(T)} đ</small></h3>
+      ${P.dot.map((d, i) => { const t = P.giao.thu[i] || {}; return `<div class="thu"><div><b>${P.dot.length > 1 ? 'Đợt ' + (i + 1) : 'Thanh toán'} · ${tien(T * d.pt / 100)} đ</b><small>${d.pt}% · ${esc(d.dk)}</small></div>
+        <div class="c"><label><input type="checkbox" data-thu="${i}" ${t.da ? 'checked' : ''}>Đã thu</label><input type="date" value="${t.ngay || ''}" data-thun="${i}"><button class="nut v nho" data-doc="pt${i}">Phiếu thu</button></div></div>`; }).join('')}</div>
+    <div class="card"><h3>Văn bản</h3><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="nut ${P.giao.doc === 'bb' ? '' : 'v'} nho" data-doc="bb">Biên bản nghiệm thu &amp; bàn giao</button>${P.dot.map((d, i) => `<button class="nut ${P.giao.doc === 'pt' + i ? '' : 'v'} nho" data-doc="pt${i}">Phiếu thu ${P.dot.length > 1 ? 'đợt ' + (i + 1) : ''}</button>`).join('')}</div></div>`;
+}
+function vbGiao(){
+  const A = P.kh, B = P.b, T = tongTien().c, doc = P.giao.doc || 'bb';
+  const ngayG = P.giao.ngay || hom(), [y, m, d] = ngayG.split('-');
+  const dauTrang = `<div class="hd-qg">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM<span>Độc lập – Tự do – Hạnh phúc</span></div>`;
+  if (doc.startsWith('pt')){
+    const i = +doc.slice(2), dot = P.dot[i] || {pt: 0, dk: ''}, t = P.giao.thu[i] || {}, st = T * dot.pt / 100, [yy, mm, dd] = (t.ngay || hom()).split('-');
+    return `${dauTrang}<div class="hd-t">PHIẾU THU</div><div class="hd-so">Số: ${esc(P.so.replace('/BRANDING', '/PT' + (i + 1)))}<br>Ngày ${dd} tháng ${mm} năm ${yy}</div>
+    ${benHTML(A, 'Người nộp tiền')}${benHTML(B, 'Người thu tiền (Chuyên gia)', true)}
+    <div class="dieu">Nội dung thu</div>
+    <p>Lý do: Thanh toán ${P.dot.length > 1 ? 'đợt ' + (i + 1) + ' (' + dot.pt + '%)' : '100%'} theo Hợp đồng dịch vụ chuyên gia số <b>${esc(P.so)}</b> về việc “${esc(P.ten)}”.</p>
+    <p>Số tiền: <b>${tien(st)} VNĐ</b></p><p><i>Bằng chữ: ${chu(st)}</i></p>
+    <p>Hình thức: chuyển khoản${B.stk ? ` vào tài khoản ${esc(B.stk)}${B.nh ? ' – ' + esc(B.nh) : ''}` : ''}.</p>
+    <div class="dieu">Xác nhận</div>
+    <ul><li>Bên nhận xác nhận đã nhận đủ số tiền nêu trên và tiếp tục triển khai công việc theo Điều 1 Hợp đồng số ${esc(P.so)}.</li>
+    <li>Phiếu thu lập thành 02 bản có giá trị như nhau, mỗi bên giữ 01 bản.</li></ul>
+    <div class="ky"><div>NGƯỜI NỘP TIỀN<small>(Ký, ghi rõ họ tên)</small>${esc((A.loai === 'cn' ? A.cty : A.dd || '').replace(/^(Ông|Bà)\s+/i, ''))}</div><div>NGƯỜI THU TIỀN<small>(Ký, ghi rõ họ tên)</small>${esc(B.ten)}</div></div>`;
+  }
+  const conLai = T - daThu(P);
+  return `${dauTrang}<div class="hd-t">BIÊN BẢN NGHIỆM THU VÀ BÀN GIAO</div>
+  <div class="hd-so">Căn cứ Hợp đồng dịch vụ chuyên gia số ${esc(P.so)}<br>Về việc “${esc(P.ten)}”</div>
+  <p>Hôm nay, ngày ${d} tháng ${m} năm ${y}, chúng tôi gồm:</p>
+  ${benHTML(A, 'Bên A (Bên thuê dịch vụ)')}${benHTML(B, 'Bên B (Chuyên gia)', true)}
+  <p style="margin-top:8pt">Hai bên cùng nghiệm thu và bàn giao các hạng mục sau:</p>
+  <table class="bang bb"><tr><th style="width:26pt">STT</th><th>Hạng mục</th><th style="width:70pt">Tình trạng</th><th style="width:150pt">File / đường dẫn</th></tr>
+  ${P.giao.items.map((it, i) => `<tr><td>${String(i + 1).padStart(2, '0')}</td><td>${esc(it.ten)}</td><td>${TTG[it.tt] || ''}</td><td style="word-break:break-all">${esc(it.link)}</td></tr>`).join('')}</table>
+  <p>Định dạng file bàn giao: ${esc(P.banGiao)}.</p>
+  ${P.giao.ghiChu ? `<p>Ghi chú: ${nl(P.giao.ghiChu)}</p>` : ''}
+  <div class="dieu">Kết luận</div>
+  <ul><li>Bên B đã hoàn thành và bàn giao các hạng mục nêu trên theo Điều 1 của hợp đồng. Bên A đã kiểm tra và đồng ý nghiệm thu.</li>
+  <li>Giá trị hợp đồng: ${tien(T)} VNĐ. Đã thanh toán: ${tien(T - conLai)} VNĐ. ${conLai > 0 ? `Bên A thanh toán số tiền còn lại <b>${tien(conLai)} VNĐ</b> (${chu(conLai)}) theo Điều 2 của hợp đồng.` : 'Bên A đã thanh toán đủ giá trị hợp đồng.'}</li>
+  <li>Biên bản lập thành 02 bản có giá trị như nhau, mỗi bên giữ 01 bản.</li></ul>
+  <div class="ky"><div>ĐẠI DIỆN BÊN A<small>(Ký, ghi rõ họ tên${A.loai === 'cn' ? '' : ', đóng dấu'})</small>${esc((A.loai === 'cn' ? A.cty : A.dd || '').replace(/^(Ông|Bà)\s+/i, ''))}</div><div>BÊN B – CHUYÊN GIA<small>(Ký, ghi rõ họ tên)</small>${esc(B.ten)}</div></div>`;
+}
+
+/* ---------- ho so du an (buoc 1) ---------- */
+function vbHoSo(){
+  const A = P.kh, T = tongTien().c, dt = daThu(P);
+  return `<div class="hs"><div class="k">Hồ sơ dự án · ${esc(P.so)}</div><h1>${esc(P.ten)}</h1><p>${esc(A.cty || 'Chưa có tên khách hàng')} · ${TT[P.tt]}</p></div>
+  <h2 class="sec">Tiến độ 6 bước</h2><div class="tien6">${STEPS.map(([k, t], i) => `<div class="${xongBuoc(P, k) ? 'x' : ''}"><b>${i + 1}</b>${t}</div>`).join('')}</div>
+  <h2 class="sec">Khách hàng</h2><div class="kv2"><b>${A.loai === 'cn' ? 'Họ tên' : 'Đơn vị'}</b><span>${esc(A.cty || '—')}</span>${A.loai === 'cn' ? '' : `<b>Người đại diện</b><span>${esc(A.dd || '—')}${A.cv ? ' · ' + esc(A.cv) : ''}</span>`}
+    <b>${A.loai === 'cn' ? 'CCCD' : 'Mã số thuế'}</b><span>${esc(A.mst || '—')}</span><b>Điện thoại</b><span>${esc(A.dt || '—')}</span><b>Email</b><span>${esc(A.email || '—')}</span><b>Địa chỉ</b><span>${esc(A.dc || '—')}</span></div>
+  <h2 class="sec">Dự án</h2><div class="kv2"><b>Lĩnh vực</b><span>${esc(P.linhVuc || '—')}</span><b>Nguồn khách</b><span>${esc(P.nguon || '—')}</span><b>Ngày</b><span>${P.ngay.split('-').reverse().join('/')}</span>
+    <b>Giá trị</b><span>${tien(T)} đ</span><b>Đã thu</b><span>${tien(dt)} đ${T ? ' (' + Math.round(dt / T * 100) + '%)' : ''}</span><b>Hạng mục</b><span>${P.goi.map(g => esc(g.ten)).join(' · ') || '—'}</span>
+    <b>Ghi chú</b><span>${esc(P.ghiChuDA || '—')}</span></div>`;
+}
+
+/* ---------- tien do ---------- */
+function xongBuoc(d, k){
+  if (d.xong && d.xong[k]) return true;
+  if (k === 'kh') return !!(d.kh.cty && (d.kh.dt || d.kh.email));
+  if (k === 'brief') return brDien(d) >= Math.ceil(brTong() * .7);
+  if (k === 'giao') return d.giao.items.length > 0 && d.giao.items.every(x => x.tt === 'duyet');
+  return false;
+}
+const soXong = d => STEPS.filter(([k]) => xongBuoc(d, k)).length;
+function tongDA(d){ const t = d.goi.reduce((s, g) => s + giaGoi(g), 0); return t; }
+function thuDA(d){ const T = tongDA(d); return d.dot.reduce((s, x, i) => s + (d.giao.thu && d.giao.thu[i]?.da ? T * x.pt / 100 : 0), 0); }
+const nutXong = k => `<div class="xongb ${P.xong[k] ? 'ok' : ''}"><span>${P.xong[k] ? '✓ Bước này đã hoàn thành' : 'Xong bước này? Đánh dấu để theo dõi tiến độ dự án.'}</span><button class="nut ${P.xong[k] ? 'v' : ''} nho" id="danhDau">${P.xong[k] ? 'Bỏ đánh dấu' : '✓ Hoàn thành'}</button></div>`;
+
+/* ---------- van ban ---------- */
+function benHTML(x, nhan, cg){
+  const B = (v) => bien(v || '……………………………………');
+  const r = cg ? [['Họ và tên', '<b>' + B(x.ten) + '</b>'], ['Chuyên môn', B(x.danh)], ['Số CCCD', B(x.cccd)], ['Địa chỉ', B(x.dc)], ['Điện thoại', B(x.dt)], ['Email', B(x.email)]]
+    : x.loai === 'cn' ? [['Họ và tên', '<b>' + B(x.cty) + '</b>'], ['Số CCCD', B(x.mst)], ['Địa chỉ', B(x.dc)], ['Điện thoại', B(x.dt)], ['Email', B(x.email)]]
+    : [[x.loai === 'hkd' ? 'Hộ kinh doanh' : 'Tên đơn vị', '<b>' + B(x.cty) + '</b>'], ['Mã số thuế', B(x.mst)], ['Địa chỉ', B(x.dc)], ['Điện thoại', B(x.dt)], ['Email', B(x.email)], ['Người đại diện', B(x.dd)], ['Chức vụ', B(x.cv)]];
+  return `<div class="ben">${nhan}</div><table class="tt">${r.map(([k, v]) => `<tr><td>${k}</td><td>: ${v}</td></tr>`).join('')}</table>`;
+}
+
+function bangGoi(){
+  const T = tongTien(), coTL = P.goi.some(g => g.tl);
+  return `<table class="bang"><tr><th style="width:30pt">STT</th><th>Hạng mục &amp; nội dung</th>${coTL ? '<th style="width:62pt">Thời gian</th>' : ''}<th style="width:96pt;text-align:right">Chi phí (VNĐ)</th></tr>`
+    + P.goi.map((g, i) => `<tr><td>${String(i + 1).padStart(2, '0')}</td><td>${bien('<b>' + esc(g.ten) + '</b>')}<ul>${[...g.it.filter(x => x.ten).map(x => esc(x.ten) + (+x.sl > 1 ? ` (${x.sl} ${esc(x.dv || '')})` : '')), ...String(g.mo || '').split('\n').map(x => x.trim()).filter(Boolean).map(esc)].map(x => `<li>${bien(x)}</li>`).join('')}</ul></td>${coTL ? `<td>${bien(esc(g.tl))}</td>` : ''}<td class="s">${bien(tien(giaGoi(g)))}</td></tr>`).join('')
+    + `<tr class="t"><td></td><td${coTL ? ' colspan="2"' : ''}>TỔNG GIÁ TRỊ HỢP ĐỒNG</td><td class="s">${bien(tien(T.c))}</td></tr></table>`;
+}
+const bien = h => `<span class="bien">${h}</span>`;
+const chu = n => docSo(n).replace(/ đồng$/, ' Việt Nam đồng chẵn./.');
+const NGAYSO = ['không','một','hai','ba','bốn','năm','sáu','bảy','tám','chín','mười'];
+function ngaySo(n){ n = +n || 0; const w = docSo(n).replace(/ đồng$/, '').toLowerCase(); return `${String(n).padStart(2, '0')} (${w})`; }
+
+function vbHD(){
+  const T = tongTien(), A = P.kh, B = P.b, [y, m, d] = (P.ngay || hom()).split('-');
+  const thue = {chua: 'Giá trị hợp đồng trên chưa bao gồm thuế thu nhập cá nhân (nếu có).', da: 'Giá trị hợp đồng trên đã bao gồm thuế thu nhập cá nhân; Bên A thực hiện khấu trừ, kê khai thuế thu nhập cá nhân cho Bên B theo quy định pháp luật (nếu có).', khong: ''}[P.thue || 'chua'];
+  const tenA = A.loai === 'cn' ? (A.cty || '') : (A.dd || '');
+  return `<div class="hd-qg">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM<span>Độc lập – Tự do – Hạnh phúc</span></div>
+  <div class="hd-t" style="margin-bottom:0">HỢP ĐỒNG DỊCH VỤ CHUYÊN GIA</div>
+  <div style="text-align:center;font-weight:700;font-size:11.5pt;margin-bottom:2pt">TƯ VẤN &amp; THIẾT KẾ THƯƠNG HIỆU</div>
+  <div class="hd-so">Số: ${bien(esc(P.so))}<br>Về việc “${bien(esc(P.ten || '……………………'))}”</div>
+  <p class="cc">– Căn cứ Bộ luật Dân sự số 91/2015/QH13 có hiệu lực từ ngày 01 tháng 01 năm 2017;</p>
+  <p class="cc">– Căn cứ Luật Sở hữu trí tuệ năm 2005, được sửa đổi, bổ sung năm 2009, 2019 và 2022;</p>
+  <p class="cc">– Căn cứ các văn bản pháp luật khác có liên quan;</p>
+  <p class="cc">– Căn cứ nhu cầu và khả năng của hai bên.</p>
+  <p style="margin-top:8pt">Hôm nay, ngày ${bien(d)} tháng ${bien(m)} năm ${bien(y)}${P.noiKy ? ', tại ' + bien(esc(P.noiKy)) : ''}, chúng tôi gồm:</p>
+  ${benHTML(A, 'Bên A (Bên thuê dịch vụ)')}${benHTML(B, 'Bên B (Chuyên gia)', true)}
+  <p style="margin-top:8pt">Hai bên thống nhất thỏa thuận nội dung hợp đồng như sau:</p>
+
+  <div class="dieu">Điều 1: Nội dung công việc</div>
+  <p>Bên A thuê Bên B, với tư cách chuyên gia độc lập, thực hiện dịch vụ tư vấn và thiết kế thương hiệu gồm các nội dung sau:</p>
+  <p><b>1.1. Chi tiết hạng mục và chi phí</b></p>${bangGoi()}
+  <p><b>1.2. Thời gian thực hiện</b></p>
+  <ul><li>Bên B hoàn thành toàn bộ các hạng mục nêu tại khoản 1.1 trong thời gian ${bien(ngaySo(P.tg))} ngày làm việc (không tính ngày lễ, thứ Bảy, Chủ nhật) kể từ ngày hai bên ký kết hợp đồng.</li>
+  <li>Thời gian thực hiện có thể được gia hạn nếu phát sinh thêm thời gian cho việc duyệt mẫu, chỉnh sửa hoặc các yếu tố khách quan khác ảnh hưởng đến tiến độ công việc.</li></ul>
+  <p><b>1.3. Bàn giao sản phẩm</b>: sau khi hoàn thành công việc, Bên B bàn giao cho Bên A:</p>
+  <ul><li>Các hạng mục thuộc khoản 1.1 Điều 1;</li>
+  <li>File thiết kế gốc và file sử dụng: ${bien(esc(P.banGiao))}, cùng các file cần thiết khác để Bên A sử dụng hiệu quả theo mục đích trong hợp đồng;</li>
+  <li>Biên bản nghiệm thu hạng mục có xác nhận của hai bên.</li></ul>
+
+  <div class="dieu">Điều 2: Thanh toán</div>
+  <p><b>2.1. Tổng giá trị hợp đồng: ${bien(tien(T.c))} VNĐ</b></p>
+  <p><i>Bằng chữ: ${bien(chu(T.c))}</i></p>
+  <p><i>Ghi chú: Giá trị hợp đồng trên là cố định, không điều chỉnh trong quá trình thực hiện. Trường hợp phát sinh được hai bên thống nhất, hai bên ký phụ lục hợp đồng thể hiện phần chi phí phát sinh.${thue ? ' ' + bien(thue) : ''}</i></p>
+  <p><b>2.2. Hình thức thanh toán</b>: Bên A thanh toán bằng chuyển khoản, bằng đồng Việt Nam, ${P.dot.length > 1 ? 'làm ' + bien(P.dot.length + ' đợt') : bien('một lần')}:</p>
+  <ul>${P.dot.map((d, i) => `<li>${P.dot.length > 1 ? 'Đợt ' + (i + 1) + ': ' : ''}Bên A thanh toán ${bien(d.pt + '%')} tổng giá trị hợp đồng, tương đương <b>${bien(tien(T.c * d.pt / 100))} VNĐ</b>, ${bien(esc(d.dk || '…'))}.</li>`).join('')}</ul>
+  <p><b>2.3. Tài khoản thụ hưởng</b></p>
+  <table class="tt"><tr><td>Chủ tài khoản</td><td>: <b>${bien(esc((B.ten || '').toUpperCase()))}</b></td></tr><tr><td>Số tài khoản</td><td>: ${bien(esc(B.stk || '……………………'))}</td></tr><tr><td>Ngân hàng</td><td>: ${bien(esc(B.nh || '……………………'))}</td></tr></table>
+
+  <div class="dieu">Điều 3: Trách nhiệm của hai bên</div>
+  <p><b>3.1. Trách nhiệm của Bên A</b></p>
+  <ul><li>Cung cấp đầy đủ thông tin, tư liệu cần thiết liên quan đến công việc thiết kế cho Bên B.</li>
+  <li>Phản hồi mẫu thiết kế trong vòng 02 (hai) ngày để tránh ảnh hưởng đến tiến độ. Quá 05 (năm) ngày kể từ khi nhận mẫu mà Bên A không có ý kiến phản hồi cụ thể thì mẫu thiết kế mặc nhiên được coi là đã được Bên A phê duyệt.</li>
+  <li>Thanh toán đầy đủ, đúng hạn theo Điều 2. Trường hợp chậm thanh toán, Bên A chịu phạt 0,05% tổng giá trị hợp đồng cho mỗi ngày chậm. Trường hợp Bên A chưa thanh toán đủ mà tự ý sử dụng thiết kế (hoặc ý tưởng, bản chỉnh sửa từ thiết kế) của Bên B, Bên B có quyền căn cứ tài liệu thiết kế để yêu cầu cơ quan có thẩm quyền giải quyết.</li>
+  <li>Sau khi nhận bàn giao, Bên A tự chịu trách nhiệm đăng ký bảo hộ nhãn hiệu cho mẫu thiết kế. Trường hợp Bên A sử dụng dịch vụ tư vấn đăng ký nhãn hiệu của Bên B, hai bên thống nhất bằng một hợp đồng riêng.</li></ul>
+  <p><b>3.2. Trách nhiệm của Bên B</b></p>
+  <ul><li>Thực hiện công việc với tư cách chuyên gia độc lập, tự chủ về phương pháp và thời gian làm việc; hợp đồng này không phát sinh quan hệ lao động giữa hai bên.</li>
+  <li>Thiết kế hoàn toàn mới, không sao chép, trùng lặp với thiết kế hiện có của tổ chức, cá nhân khác; chịu trách nhiệm pháp lý về tài liệu và mẫu thiết kế bàn giao cho Bên A.</li>
+  <li>Đảm bảo tiến độ theo khoản 1.2 Điều 1. Trường hợp chậm tiến độ do lỗi của Bên B, Bên B chịu phạt 0,05% tổng giá trị hợp đồng cho mỗi ngày chậm, tối đa 10 (mười) ngày. Chậm quá 10 (mười) ngày làm việc mà không có thỏa thuận với Bên A thì Bên A có quyền chấm dứt hợp đồng và Bên B hoàn trả toàn bộ số tiền Bên A đã thanh toán.</li>
+  <li>Tài liệu Bên A cung cấp và sản phẩm thiết kế sau nghiệm thu, bàn giao thuộc quyền sở hữu của Bên A; Bên B không sử dụng hoặc tiết lộ cho bên thứ ba khi chưa được Bên A đồng ý${P.portfolio ? bien(', trừ việc sử dụng hình ảnh sản phẩm đã được Bên A công bố ra thị trường để giới thiệu năng lực chuyên môn (portfolio) của Bên B') : ''}.</li></ul>
+
+  <div class="dieu">Điều 4: Kết quả và nghiệm thu</div>
+  <p>4.1. Sau khi Bên B hoàn thành sản phẩm theo yêu cầu, hai bên tiến hành bàn giao và nghiệm thu sản phẩm.</p>
+  <p>4.2. Bên A cử nhân sự có chuyên môn để nghiệm thu khi Bên B có yêu cầu bàn giao.</p>
+  <p>4.3. Sau khi đã bàn giao và nghiệm thu, mọi yêu cầu sửa đổi của Bên A được tính chi phí riêng theo thỏa thuận.</p>
+  <p>4.4. Hai bên ký biên bản nghiệm thu các hạng mục tại Điều 1. Trường hợp Bên A không xác nhận nghiệm thu, hợp đồng mặc nhiên được nghiệm thu sau 07 (bảy) ngày kể từ ngày Bên A nhận được văn bản đề nghị nghiệm thu.</p>
+
+  <div class="dieu">Điều 5: Xử lý phát sinh</div>
+  <p><b>5.1. Bổ sung hạng mục</b>: trường hợp Bên A muốn bổ sung hạng mục so với hợp đồng, hai bên thống nhất chi phí, thời gian thực hiện và các nội dung liên quan bằng phụ lục hợp đồng.</p>
+  <p><b>5.2. Chấm dứt hợp đồng trước hạn</b></p>
+  <ul><li>Trường hợp hợp đồng chấm dứt theo đề nghị của Bên A, chi phí được tính theo khối lượng công việc Bên B đã thực hiện:</li></ul>
+  <table class="bang"><tr><th style="width:60pt">Giai đoạn</th><th>Tiến độ công việc</th><th style="width:120pt">Chi phí</th></tr>
+    <tr><td>1</td><td>Từ khi ký hợp đồng đến khi gửi mẫu lần 1</td><td>30% giá trị hợp đồng</td></tr>
+    <tr><td>2</td><td>Sau khi gửi mẫu thiết kế lần 2</td><td>40% giá trị hợp đồng</td></tr>
+    <tr><td>3</td><td>Sau khi gửi mẫu thiết kế lần 3</td><td>50% giá trị hợp đồng</td></tr></table>
+  <ul><li>Bên B không được đơn phương chấm dứt hợp đồng, trừ trường hợp bất khả kháng và được Bên A đồng ý; khi đó Bên B hoàn trả toàn bộ số tiền Bên A đã thanh toán.</li></ul>
+
+  <div class="dieu">Điều 6: Giải quyết tranh chấp</div>
+  <p>6.1. Hai bên cam kết thực hiện đúng các điều khoản của hợp đồng; vướng mắc phát sinh được giải quyết trên tinh thần thương lượng.</p>
+  <p>6.2. Trường hợp không thương lượng được, tranh chấp được đưa ra Tòa án có thẩm quyền tại ${bien(esc(P.toaAn || 'TP. Đà Nẵng'))} giải quyết. Chi phí và thiệt hại phát sinh từ tranh chấp do bên có lỗi chịu theo quyết định của Tòa án.</p>
+
+  <div class="dieu">Điều 7: Điều khoản chung</div>
+  <p>7.1. Hợp đồng có hiệu lực từ ngày ký và được thanh lý khi hai bên hoàn thành các nghĩa vụ trong hợp đồng; không bên nào được tự ý hủy hợp đồng ngoài các trường hợp tại Điều 5.</p>
+  <p>7.2. Hợp đồng được lập thành 02 (hai) bản, kèm phụ lục (nếu có), mỗi bên giữ 01 (một) bản có giá trị pháp lý như nhau.</p>
+  <div class="ky"><div>ĐẠI DIỆN BÊN A<small>(Ký, ghi rõ họ tên${A.loai === 'cn' ? '' : ', đóng dấu'})</small>${bien(esc(tenA.replace(/^(Ông|Bà)\s+/i, '')))}</div><div>BÊN B – CHUYÊN GIA<small>(Ký, ghi rõ họ tên)</small>${bien(esc(B.ten))}</div></div>`;
+}
+
+function vbBG(){
+  const T = tongTien(), A = P.kh, B = P.b;
+  return `<div class="bg"><div class="hero"><div class="k">${esc(B.ten)} · ${esc(B.danh)}</div><h1>BÁO GIÁ</h1>
+    <div class="m"><div>Dự án<b>${esc(P.ten || '—')}</b></div><div>Số<b>${esc(P.so.replace('/BRANDING', '/BG'))}</b></div><div>Ngày<b>${P.ngay.split('-').reverse().join('/')}</b></div><div>Hiệu lực<b>${esc(P.hieuluc)}</b></div></div></div>
+  <div class="ben2"><div class="bx"><div class="k">Kính gửi</div><b>${esc(A.cty || '……………………')}</b><br>${esc(A.dd)}${A.cv ? ' · ' + esc(A.cv) : ''}<br>${esc(A.dt)}${A.email ? ' · ' + esc(A.email) : ''}</div>
+    <div class="bx"><div class="k">Chuyên gia báo giá</div><b>${esc(B.ten)}</b><br>${esc(B.danh)}<br>${esc(B.dt)} · ${esc(B.email)}</div></div>
+  ${P.goi.map((g, i) => `<div class="gb"><span class="bd">${String.fromCharCode(65 + i)}</span><div><h4>${esc(g.ten)}</h4>
+    <table>${g.it.filter(x => x.ten).map(x => `<tr><td>${esc(x.ten)}</td><td class="s">${+x.sl > 1 || x.dv !== 'gói' ? `${x.sl} ${esc(x.dv || '')}` : ''}</td></tr>`).join('')}</table></div><div class="gia">${tien(giaGoi(g))} đ</div></div>`).join('')}
+  <div class="tong"><div class="r"><span>Cộng</span><span>${tien(T.t)} đ</span></div>${+P.vat ? `<div class="r"><span>VAT ${P.vat}%</span><span>${tien(T.v)} đ</span></div>` : ''}
+    <div class="r l"><span>TỔNG THANH TOÁN</span><span>${tien(T.c)} đ</span></div><div class="chu">${docSo(T.c)}</div>
+    <div class="dot">${P.dot.map((d, i) => `Đợt ${i + 1}: ${d.pt}% (${tien(T.c * d.pt / 100)} đ) — ${esc(d.dk)}`).join('<br>')}<br>Thời gian thực hiện: ${esc(P.tg)} ngày làm việc · Chỉnh sửa tối đa ${esc(P.sua)} lần/hạng mục</div></div>
+  <h3>Phạm vi công việc</h3>
+  <div class="c3"><div><b>Bao gồm</b><ul>${P.bao.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>
+    <div><b>Khách hàng cung cấp</b><ul>${P.cc.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>
+    <div><b>Không bao gồm</b><ul>${P.khong.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div></div>
+  <h3>Quy trình làm việc</h3>${P.qt.map((q, i) => `<div class="qt"><i>${i + 1}</i><span>${esc(q[0])}</span><b>${esc(q[1])}</b></div>`).join('')}
+  <div class="cam">XIN CHÂN THÀNH CẢM ƠN QUÝ KHÁCH!</div>
+  <div class="ky" style="margin-top:16pt"><div>XÁC NHẬN CỦA KHÁCH HÀNG<small>(Ký, ghi rõ họ tên)</small></div><div>CHUYÊN GIA<small>(Ký, ghi rõ họ tên)</small>${esc(B.ten)}</div></div></div>`;
+}
+function vbDH(){
+  const d = P.dh, ten = d.ten || P.kh.cty || 'Thương hiệu', sec = (n, t) => `<h2><span>${n}</span>${t}</h2>`;
+  const dv = [d.dvDoiTuong, d.dvNganh, d.dvLoiIch, d.dvLyDo].some(Boolean)
+    ? `Dành cho <b>${esc(d.dvDoiTuong || '…')}</b>, <b>${esc(ten)}</b> là <b>${esc(d.dvNganh || '…')}</b> mang đến <b>${esc(d.dvLoiIch || '…')}</b> nhờ <b>${esc(d.dvLyDo || '…')}</b>.` : '';
+  const sang = h => { const c = h.replace('#',''); const r = parseInt(c.substr(0,2),16), g = parseInt(c.substr(2,2),16), b = parseInt(c.substr(4,2),16); return (r*299+g*587+b*114)/1000 > 150; };
+  return `<div class="dh"><div class="bia"><div class="k">Định hướng thương hiệu · ${esc(P.b.ten)}</div><h1>${esc(ten)}</h1><p>${esc(d.nganh || P.ten || '')} · ${P.ngay.split('-').reverse().join('/')}</p></div>
+  ${sec('01', 'Bối cảnh')}<div class="kv"><b>Ngành</b><span>${nl(d.nganh) || '—'}</span><b>Bối cảnh</b><span>${nl(d.boiCanh) || '—'}</span><b>Khách hàng mục tiêu</b><span>${nl(d.doiTuong) || '—'}</span><b>Insight</b><span>${nl(d.insight) || '—'}</span><b>Tham khảo</b><span>${nl(d.doiThu) || '—'}</span></div>
+  ${sec('02', 'Nền tảng thương hiệu')}<div class="kv"><b>Tầm nhìn</b><span>${nl(d.tamNhin) || '—'}</span><b>Sứ mệnh</b><span>${nl(d.suMenh) || '—'}</span></div>
+  ${d.gt.some(g => g[0]) ? `<div class="gt" style="margin-top:8pt">${d.gt.filter(g => g[0]).map(g => `<div><b>${esc(g[0])}</b><small>${esc(g[1])}</small></div>`).join('')}</div>` : ''}
+  ${sec('03', 'Định vị')}${dv ? `<div class="dv">${dv}</div>` : '<p>—</p>'}
+  ${d.slogan ? `<p style="margin-top:6pt;color:#666;font-size:9pt;letter-spacing:1.5px;text-transform:uppercase">Thông điệp đề xuất</p>${d.slogan.split('\n').filter(Boolean).map(s => `<div class="sl">“${esc(s)}”</div>`).join('')}` : ''}
+  ${sec('04', 'Cá tính thương hiệu')}${TCACH.map((t, i) => `<div class="tc2"><span>${t[0]}</span><div class="ln"><i style="left:${d.tc[i]}%"></i></div><span>${t[1]}</span></div>`).join('')}
+  ${d.tk.length ? `<div class="tagd" style="margin-top:8pt">${d.tk.map(t => `<span>${esc(t)}</span>`).join('')}</div>` : ''}
+  ${sec('05', 'Ngôn ngữ hình ảnh')}<div class="mauc">${d.mau.map(m => `<div style="background:${m};color:${sang(m) ? '#111' : '#fff'};border:1px solid #ddd">${m.toUpperCase()}</div>`).join('')}</div>
+  ${d.font.length ? `<p style="margin-top:8pt"><b>Hướng chữ:</b> ${d.font.map(esc).join(' · ')}</p>` : ''}
+  ${d.mb.length ? `<div class="mbd" style="margin-top:8pt">${d.mb.map(m => `<div style="background-image:url(${m})"></div>`).join('')}</div>` : ''}
+  ${d.ghiChu ? sec('06', 'Ghi chú') + `<p>${nl(d.ghiChu)}</p>` : ''}</div>`;
+}
+
+/* ---------- ve & gan ---------- */
+function veDoc(){
+  const v = VIEW;
+  $('#doc').innerHTML = {kh: vbHoSo, brief: vbBrief, bg: vbBG, hd: vbHD, dh: vbDH, giao: vbGiao}[v]();
+  $('#doc').classList.toggle('hb', BIEN && v === 'hd');
+  $('#tenTL').textContent = 'Xem trước · ' + {kh:'Hồ sơ dự án', brief:'Bảng thông tin', bg:'Báo giá', hd:'Hợp đồng', dh:'Định hướng', giao: String(P.giao.doc).startsWith('pt') ? 'Phiếu thu' : 'Biên bản nghiệm thu'}[v];
+}
+function veForm(){
+  $('#form').innerHTML = {kh: formKH, brief: formBrief, bg: formBG, hd: formHD, dh: formDH, giao: formGiao}[VIEW]() + nutXong(VIEW)
+    + `<div style="display:flex;justify-content:space-between;gap:8px">${STEPS.findIndex(s => s[0] === VIEW) > 0 ? `<a class="nut v" href="#/p/${P.id}/${STEPS[STEPS.findIndex(s => s[0] === VIEW) - 1][0]}">← Bước trước</a>` : '<span></span>'}${STEPS.findIndex(s => s[0] === VIEW) < 5 ? `<a class="nut" href="#/p/${P.id}/${STEPS[STEPS.findIndex(s => s[0] === VIEW) + 1][0]}">Bước tiếp theo →</a>` : '<a class="nut" href="#/">Về tổng quan</a>'}</div>`;
+  $$('#form [data-p]').forEach(o => { o.value = layP(o.dataset.p) ?? ''; });
+}
+function veSB(){
+  const sb = $('#sb');
+  if (!P){
+    const dem = k => DS.filter(d => k === 'all' ? true : k === 'dang' ? !['xong','dung'].includes(d.tt) : d.tt === k).length;
+    sb.innerHTML = `<div class="logo"><b>BRANDING</b><span>Bàn làm việc · ${esc(CG.ten)}</span></div>
+      <nav class="nav"><div class="h">XEM</div><button data-view="kanban" class="${F.view === 'kanban' ? 'on' : ''}"><span>▦ Bảng Kanban</span><em>${DS.length}</em></button>
+      <div class="h">DANH SÁCH THEO TRẠNG THÁI</div>
+      ${[['all','Tất cả dự án'],['dang','Đang thực hiện'], ...Object.entries(TT)].map(([k, t]) => `<button data-loc="${k}" class="${F.view === 'bang' && F.tt === k ? 'on' : ''}"><span>${t}</span><em>${dem(k)}</em></button>`).join('')}</nav>
+      <div class="sbf"><b>${DS.length} dự án</b> lưu trên trình duyệt này.<br>Nên "Sao lưu" định kỳ và khi đổi máy.</div>
+      <div class="sbt"><button class="nut nho" id="saoLuu">⤓ Sao lưu</button><button class="nut nho" id="khoiP">Khôi phục</button></div>`;
+    return;
+  }
+  const n = soXong(P);
+  sb.innerHTML = `<div class="dv"><a href="#/">← Tất cả dự án</a><b>${esc(P.ten || 'Không tên')}</b><span>${esc(P.so)} · ${esc(P.kh.cty || 'Chưa có khách hàng')}</span>
+      <div class="pb"><i style="width:${n / 6 * 100}%"></i></div><span>${n}/6 bước · ${TT[P.tt]}</span></div>
+    <nav class="nav"><div class="h">QUY TRÌNH</div>
+    ${STEPS.map(([k, t, m], i) => `<button data-v="${k}" class="${VIEW === k ? 'on' : ''} ${xongBuoc(P, k) ? 'xong' : ''}"><i>${xongBuoc(P, k) ? '✓' : i + 1}</i><span>${t}<small>${m}</small></span></button>`).join('')}</nav>
+    <div class="sbt" style="margin-top:auto"><button class="nut nho" id="nhan">Nhân bản</button><button class="nut nho" id="xoa">Xoá dự án</button></div>`;
+}
+function veTop(){
+  if (!P){ $('#tieuDe').firstChild.textContent = 'Tổng quan dự án'; $('#phuDe').textContent = 'Mỗi dự án đi qua 6 bước: thông tin → brief → báo giá → hợp đồng → định hướng → bàn giao';
+    $('#topR').innerHTML = `<button class="nut" id="moi">＋ Dự án mới</button>`; $('#luu').textContent = ''; return; }
+  const s = STEPS.find(x => x[0] === VIEW), i = STEPS.indexOf(s);
+  $('#tieuDe').firstChild.textContent = `${i + 1}. ${s[1]}`; $('#phuDe').textContent = s[2];
+  $('#topR').innerHTML = `<select class="da" id="ttTop" title="Trạng thái dự án">${Object.entries(TT).map(([k, v]) => `<option value="${k}" ${P.tt === k ? 'selected' : ''}>${v}</option>`).join('')}</select>`;
+}
+function veTat(){ veSB(); veTop();
+  $('#vDash').hidden = !!P; $('#vWs').hidden = !P;
+  if (P){ veForm(); veDoc(); } else veDash(); }
+
+/* ---------- tong quan ---------- */
+const F = {q: '', tt: 'dang', nam: 'all', sx: 'moi', trang: 1, view: (() => { try { return localStorage.getItem('branding-view') || 'kanban'; } catch(e){ return 'kanban'; } })(), gon: {xong: true, dung: true}};
+const khoaXep = d => d.xep ?? -(d.tao || 0);
+function locDS(boTT){
+  let ds = DS.filter(d => F.nam === 'all' || (d.ngay || '').startsWith(F.nam));
+  if (!boTT) ds = ds.filter(d => F.tt === 'all' ? true : F.tt === 'dang' ? !['xong','dung'].includes(d.tt) : d.tt === F.tt);
+  if (F.q){ const q = khongDau(F.q).toLowerCase(); ds = ds.filter(d => khongDau([d.ten, d.so, d.kh.cty, d.kh.dd, d.kh.dt, d.linhVuc].join(' ')).toLowerCase().includes(q)); }
+  return ds;
+}
+function hanNhan(d){
+  if (!d.hanChot || ['xong','dung'].includes(d.tt)) return '';
+  const con = Math.ceil((new Date(d.hanChot + 'T23:59:59') - new Date()) / 864e5), n = d.hanChot.split('-').reverse().slice(0, 2).join('/');
+  return con < 0 ? `<span class="tre">Trễ ${-con} ngày</span>` : con <= 3 ? `<span class="gan">⏱ ${n} · còn ${con} ngày</span>` : `<span>⏱ ${n}</span>`;
+}
+function theKC(d){
+  const T = tongDA(d), th = thuDA(d);
+  return `<div class="kc" draggable="true" data-id="${d.id}">
+    <div class="lb">${hanNhan(d)}${d.linhVuc ? `<span>${esc(d.linhVuc)}</span>` : ''}</div>
+    <b>${esc(d.ten || 'Không tên')}</b><small>${esc(d.kh.cty || 'Chưa có khách hàng')}</small>
+    <div class="kf"><div class="buoc">${STEPS.map(([k, t]) => `<i class="${xongBuoc(d, k) ? 'x' : ''}" title="${t}"></i>`).join('')}</div>
+      ${T ? `<span class="pt">${th ? 'thu ' + Math.round(th / T * 100) + '%' : ''}</span><em>${T >= 1e6 ? (T / 1e6).toLocaleString('vi-VN', {maximumFractionDigits: 1}) + 'tr' : tien(T)}</em>` : ''}</div>
+    <div class="mo6">${STEPS.map(([k, t], i) => `<a href="#/p/${d.id}/${k}" title="${i + 1}. ${t}" class="${xongBuoc(d, k) ? 'x' : ''}">${i + 1}</a>`).join('')}</div></div>`;
+}
+function veKanban(){
+  const ds = locDS(true);
+  return `<div class="kb" id="kb">${Object.entries(TT).map(([k, t]) => {
+    const c = ds.filter(d => d.tt === k).sort((a, b) => khoaXep(a) - khoaXep(b)), gia = c.reduce((s, d) => s + tongDA(d), 0);
+    return `<section class="kcol ${F.gon[k] ? 'gon' : ''}" data-tt="${k}">
+      <div class="kh2" ${F.gon[k] ? `data-mocot="${k}"` : ''}><b>${t}</b><span class="dem">${c.length}</span>${gia ? `<small>${tien(gia)}</small>` : '<small></small>'}${F.gon[k] ? '' : `<button data-gon="${k}" title="Thu gọn cột">‹</button>`}</div>
+      <div class="kl" data-tt="${k}">${c.map(theKC).join('')}</div>
+      <div class="kadd"><input data-them-cot="${k}" placeholder="＋ Thêm dự án, gõ tên rồi Enter"></div></section>`; }).join('')}</div>`;
+}
+function veBang(){
+  let ds = locDS();
+  ds.sort({moi: (a, b) => b.capNhat - a.capNhat, ngay: (a, b) => (b.ngay || '').localeCompare(a.ngay || ''), gia: (a, b) => tongDA(b) - tongDA(a), ten: (a, b) => (a.ten || '').localeCompare(b.ten || '', 'vi')}[F.sx]);
+  const TR = 20, soTr = Math.max(1, Math.ceil(ds.length / TR)); F.trang = Math.min(F.trang, soTr);
+  const trang = ds.slice((F.trang - 1) * TR, F.trang * TR);
+  return `<div class="chip">${[['dang','Đang thực hiện'],['all','Tất cả'], ...Object.entries(TT)].map(([k, t]) => `<button data-loc="${k}" class="${F.tt === k ? 'on' : ''}">${t}<i>${DS.filter(d => k === 'all' ? true : k === 'dang' ? !['xong','dung'].includes(d.tt) : d.tt === k).length}</i></button>`).join('')}</div>
+    ${trang.length ? `<table class="bang2"><thead><tr><th>Mã</th><th>Dự án · Khách hàng</th><th>Trạng thái</th><th>6 bước</th><th>Hạn chót</th><th class="s">Giá trị</th><th class="s">Đã thu</th><th></th></tr></thead><tbody>
+      ${trang.map(d => `<tr data-mo="${d.id}"><td class="ma">${esc(d.so)}</td><td><b>${esc(d.ten || 'Không tên')}</b><small>${esc(d.kh.cty || 'Chưa có khách hàng')}${d.linhVuc ? ' · ' + esc(d.linhVuc) : ''}</small></td>
+        <td><span class="pill ${d.tt}">${TT[d.tt]}</span></td><td><div class="buoc" title="${soXong(d)}/6 bước">${STEPS.map(([k, t]) => `<i class="${xongBuoc(d, k) ? 'x' : ''}" title="${t}"></i>`).join('')}</div></td>
+        <td><small>${d.hanChot ? d.hanChot.split('-').reverse().join('/') : '—'}</small></td>
+        <td class="s">${tien(tongDA(d))}</td><td class="s">${tien(thuDA(d))}</td>
+        <td class="s"><button class="nut v nho" data-nb="${d.id}" title="Tạo dự án mới từ dự án này">Nhân bản</button></td></tr>`).join('')}</tbody></table>
+      <div class="trang">${ds.length} dự án${soTr > 1 ? ' · ' + Array.from({length: soTr}, (_, i) => `<button data-tr="${i + 1}" class="${F.trang === i + 1 ? 'on' : ''}">${i + 1}</button>`).join('') : ''}</div>`
+    : `<div class="rong">${DS.length ? 'Không có dự án phù hợp bộ lọc.' : 'Chưa có dự án nào. Bấm <b>＋ Dự án mới</b> để bắt đầu.'}</div>`}`;
+}
+function veDash(){
+  const giaTri = DS.filter(d => !['tiemnang','baogia','dung'].includes(d.tt));
+  const tongHD = giaTri.reduce((s, d) => s + tongDA(d), 0), thu = DS.reduce((s, d) => s + thuDA(d), 0);
+  const tre = DS.filter(d => d.hanChot && !['xong','dung'].includes(d.tt) && new Date(d.hanChot + 'T23:59:59') < new Date()).length;
+  const nams = [...new Set(DS.map(d => (d.ngay || '').slice(0, 4)))].filter(Boolean).sort().reverse();
+  const cuon = $('#kb') ? $('#kb').scrollLeft : 0;
+  $('#vDash').innerHTML = `
+    <div class="stat">
+      <div class="den"><small>Đang thực hiện</small><b>${DS.filter(d => !['xong','dung'].includes(d.tt)).length}</b><span>${tre ? tre + ' dự án trễ hạn' : 'trên tổng ' + DS.length + ' dự án'}</span></div>
+      <div><small>Giá trị đã ký</small><b>${tien(tongHD)} đ</b><span>${giaTri.length} hợp đồng</span></div>
+      <div><small>Đã thu</small><b>${tien(thu)} đ</b><span>${tongHD ? Math.round(thu / tongHD * 100) : 0}% giá trị đã ký</span></div>
+      <div><small>Còn phải thu</small><b>${tien(Math.max(0, tongHD - thu))} đ</b><span>từ các hợp đồng đã ký</span></div></div>
+    <div class="tb"><span class="vw"><button data-view="kanban" class="${F.view === 'kanban' ? 'on' : ''}">▦ Bảng Kanban</button><button data-view="bang" class="${F.view === 'bang' ? 'on' : ''}">☰ Danh sách</button></span>
+      <input type="search" id="tim" placeholder="Tìm dự án, khách hàng, mã, số điện thoại…" value="${esc(F.q)}">
+      <select id="locNam"><option value="all">Mọi năm</option>${nams.map(n => `<option ${F.nam === n ? 'selected' : ''}>${n}</option>`).join('')}</select>
+      ${F.view === 'bang' ? `<select id="sapXep"><option value="moi">Mới cập nhật</option><option value="ngay">Ngày ký</option><option value="gia">Giá trị cao</option><option value="ten">Tên A–Z</option></select>` : ''}
+      <button class="nut" id="moi2">＋ Dự án mới</button></div>
+    ${F.view === 'kanban' ? veKanban() : veBang()}
+    ${F.view === 'kanban' ? '<div class="goi" style="margin-top:4px">Kéo thẻ sang cột khác để đổi trạng thái · bấm thẻ để nhập nhanh và xuất văn bản · số 1–6 dưới thẻ mở thẳng từng bước.</div>' : ''}
+    <div class="hdsd">${STEPS.map(([k, t, m], i) => `<div><b><i>${i + 1}</i>${t}</b>${m}</div>`).join('')}</div>`;
+  if ($('#sapXep')) $('#sapXep').value = F.sx;
+  if ($('#kb')) $('#kb').scrollLeft = cuon;
+  ganKeo();
+}
+
+/* ---------- keo tha kanban ---------- */
+let keoId = null;
+function ganKeo(){
+  $$('.kc').forEach(c => {
+    c.ondragstart = e => { keoId = c.dataset.id; e.dataTransfer.effectAllowed = 'move'; try { e.dataTransfer.setData('text/plain', keoId); } catch(_){} setTimeout(() => c.classList.add('dang'), 0); };
+    c.ondragend = () => { c.classList.remove('dang'); $$('.kl').forEach(l => l.classList.remove('keo')); $$('.ph-kc').forEach(x => x.remove()); };
+  });
+  $$('.kl').forEach(l => {
+    l.ondragover = e => { if (!keoId) return; e.preventDefault(); l.classList.add('keo');
+      $$('.ph-kc').forEach(x => x.remove()); const sau = sauThe(l, e.clientY), ph = document.createElement('div'); ph.className = 'ph-kc';
+      sau ? l.insertBefore(ph, sau) : l.appendChild(ph); };
+    l.ondragleave = e => { if (!l.contains(e.relatedTarget)) { l.classList.remove('keo'); $$('.ph-kc').forEach(x => x.remove()); } };
+    l.ondrop = e => { e.preventDefault(); const d = DS.find(x => x.id === keoId); if (!d) return;
+      const sau = sauThe(l, e.clientY), cot = l.dataset.tt;
+      const c = DS.filter(x => x.tt === cot && x.id !== d.id).sort((a, b) => khoaXep(a) - khoaXep(b));
+      const i = sau ? c.findIndex(x => x.id === sau.dataset.id) : c.length;
+      const truoc = c[i - 1], sau2 = c[i];
+      d.xep = truoc && sau2 ? (khoaXep(truoc) + khoaXep(sau2)) / 2 : sau2 ? khoaXep(sau2) - 1000 : truoc ? khoaXep(truoc) + 1000 : 0;
+      const doi = d.tt !== cot; d.tt = cot; keoId = null; luuDA(d); veDash(); veSB();
+      if (doi) bao(`Đã chuyển “${d.ten}” sang ${TT[cot]}`); };
+  });
+}
+function sauThe(l, y){ return [...l.querySelectorAll('.kc:not(.dang)')].find(c => { const r = c.getBoundingClientRect(); return y < r.top + r.height / 2; }); }
+function luuDA(d){ d.capNhat = Date.now(); KHO.ghi(d).catch(() => bao('Không lưu được — hãy Sao lưu ra file')); }
+
+/* ---------- ngan keo nhap nhanh ---------- */
+let NG = null;
+function moNgan(id){ NG = DS.find(x => x.id === id); if (!NG) return; veNgan(); $('#ngan').classList.add('on'); $('#man').classList.add('on'); }
+function dongNgan(){ NG = null; $('#ngan').classList.remove('on'); $('#man').classList.remove('on'); if (!P) veDash(); }
+function veNgan(){
+  const d = NG, T = tongDA(d), th = thuDA(d);
+  const o = (lab, k, type) => `<div class="f"><label>${lab}</label><input data-ng="${k}" ${type ? `type="${type}"` : ''} value="${esc(k.split('.').reduce((a, x) => a?.[x], d) ?? '')}"></div>`;
+  $('#ngan').innerHTML = `<div class="nh"><div><b>${esc(d.ten || 'Không tên')}</b><small>${esc(d.so)} · ${TT[d.tt]}</small></div><button id="dongNg" title="Đóng">✕</button></div>
+  <div class="nb2">
+    <h4>Nhập nhanh</h4>
+    ${o('Tên dự án', 'ten')}
+    <div class="g2">${o('Khách hàng', 'kh.cty')}${o('Điện thoại', 'kh.dt')}</div>
+    <div class="g2"><div class="f"><label>Trạng thái</label><select data-ng="tt">${Object.entries(TT).map(([k, v]) => `<option value="${k}" ${d.tt === k ? 'selected' : ''}>${v}</option>`).join('')}</select></div>${o('Hạn chót', 'hanChot', 'date')}</div>
+    <div class="f"><label>Ghi chú</label><textarea data-ng="ghiChuDA" rows="2">${esc(d.ghiChuDA)}</textarea></div>
+    <h4>Tiền</h4>
+    <div class="tien3"><div><small>Giá trị</small><b>${tien(T)}</b></div><div><small>Đã thu</small><b>${tien(th)}</b></div><div><small>Còn lại</small><b>${tien(T - th)}</b></div></div>
+    <h4>Tiến độ 6 bước <span style="float:right;letter-spacing:0;text-transform:none">${soXong(d)}/6</span></h4>
+    <div class="bb6">${STEPS.map(([k, t], i) => { const x = xongBuoc(d, k); return `<label class="${x ? 'x' : ''}"><input type="checkbox" data-ngx="${k}" ${x ? 'checked' : ''}><i>${x ? '✓' : i + 1}</i><span>${t}</span><a href="#/p/${d.id}/${k}">Mở →</a></label>`; }).join('')}</div>
+    <h4>Xuất văn bản (In / Lưu PDF)</h4>
+    <div class="xp">${[['kh','Hồ sơ dự án'],['brief','Bảng thông tin'],['bg','Báo giá'],['hd','Hợp đồng'],['dh','Định hướng'],['giao','Biên bản bàn giao']].map(([k, t]) => `<button class="nut v nho" data-xuat="${k}">⤓ ${t}</button>`).join('')}</div>
+    <h4>Thao tác</h4>
+    <div style="display:flex;gap:8px;flex-wrap:wrap"><a class="nut" href="#/p/${d.id}/kh">Mở dự án</a><button class="nut v" data-nb="${d.id}">Nhân bản</button><button class="nut v" data-xoang="${d.id}">Xoá</button></div>
+  </div>`;
+}
+$('#man').onclick = dongNgan;
+$('#ngan').addEventListener('input', e => { const k = e.target.dataset.ng; if (!k || !NG) return;
+  const ks = k.split('.'), l = ks.pop(); ks.reduce((a, x) => a[x], NG)[l] = e.target.value; luuDA(NG);
+  if (k === 'ten' || k === 'tt') $('#ngan .nh').innerHTML = `<div><b>${esc(NG.ten || 'Không tên')}</b><small>${esc(NG.so)} · ${TT[NG.tt]}</small></div><button id="dongNg" title="Đóng">✕</button>`; });
+$('#ngan').addEventListener('change', e => { const k = e.target.dataset.ngx; if (!k || !NG) return;
+  NG.xong = NG.xong || {}; NG.xong[k] = e.target.checked;
+  if (e.target.checked){ const len = {bg: 'baogia', hd: 'thietke', giao: 'xong'}[k], tt = Object.keys(TT); if (len && tt.indexOf(NG.tt) < tt.indexOf(len)) NG.tt = len; }
+  luuDA(NG); veNgan(); });
+let IN_SAU = false;
+
+/* ---------- dieu huong ---------- */
+function moDA(id, buoc){ location.hash = `#/p/${id}/${buoc || 'kh'}`; }
+async function taoMoi(tu){
+  let d = tu ? JSON.parse(JSON.stringify(tu)) : moiDA();
+  if (tu){ const m = moiDA(); Object.assign(d, {id: m.id, ten: tu.ten + ' (bản sao)', ngay: m.ngay, so: soMoi(m.ngay), tt: 'tiemnang', xong: {}, tao: Date.now(), capNhat: Date.now(),
+    kh: {...m.kh}, br: {hm: []}, giao: m.giao}); }
+  DS.unshift(d); await KHO.ghi(d); moDA(d.id, 'kh'); bao(tu ? 'Đã tạo dự án mới từ bản cũ: giữ hạng mục, giá, điều khoản; xoá thông tin khách' : 'Đã tạo dự án mới');
+}
+function dinhTuyen(){
+  const m = location.hash.match(/^#\/p\/([^/]+)\/?(\w+)?/);
+  if (m){ const d = DS.find(x => x.id === m[1]); if (d){ P = d; VIEW = STEPS.some(s => s[0] === m[2]) ? m[2] : 'kh'; veTat(); window.scrollTo(0, 0);
+    if (IN_SAU){ IN_SAU = false; setTimeout(() => $('#inPDF').click(), 350); } return; } }
+  P = null; veTat();
+}
+window.addEventListener('hashchange', dinhTuyen);
+document.addEventListener('click', async e => {
+  const kc = e.target.closest('.kc'); if (kc && !e.target.closest('a')) return moNgan(kc.dataset.id);
+  if (e.target.closest('#ngan a')) { $('#ngan').classList.remove('on'); $('#man').classList.remove('on'); }
+  const b = e.target.closest('button,tr[data-mo],[data-mocot]'); if (!b) return; const d = b.dataset;
+  if (d.mocot){ F.gon[d.mocot] = false; return veDash(); }
+  if (d.gon){ F.gon[d.gon] = true; return veDash(); }
+  if (d.view){ F.view = d.view; try { localStorage.setItem('branding-view', F.view); } catch(_){} if (P) { location.hash = '#/'; return; } veSB(); return veDash(); }
+  if (b.id === 'dongNg') return dongNgan();
+  if (d.xuat && NG){ const id = NG.id; dongNgan(); IN_SAU = true; return moDA(id, d.xuat); }
+  if (d.xoang){ const x = DS.find(y => y.id === d.xoang); if (!x || !confirm('Xoá dự án "' + x.ten + '"? Không khôi phục được nếu chưa sao lưu.')) return;
+    DS = DS.filter(y => y.id !== x.id); await KHO.xoa(x.id); dongNgan(); veTat(); return bao('Đã xoá dự án'); }
+  if (d.nb){ e.stopPropagation(); if (NG) { $('#ngan').classList.remove('on'); $('#man').classList.remove('on'); NG = null; } return taoMoi(DS.find(x => x.id === d.nb)); }
+  if (d.mo) return moDA(d.mo);
+  if (d.v && b.closest('#sb')) return moDA(P.id, d.v);
+  if (d.loc){ F.tt = d.loc; F.trang = 1; if (b.closest('#sb')) F.view = 'bang'; if (P) location.hash = '#/'; else veTat(); return; }
+  if (d.tr){ F.trang = +d.tr; return veDash(); }
+  if (b.id === 'moi' || b.id === 'moi2') return taoMoi();
+  if (b.id === 'nhan') return taoMoi(P);
+  if (b.id === 'xoa'){ if (!confirm('Xoá dự án "' + P.ten + '"? Không khôi phục được nếu chưa sao lưu.')) return;
+    const id = P.id; DS = DS.filter(x => x.id !== id); await KHO.xoa(id); location.hash = '#/'; return bao('Đã xoá dự án'); }
+  if (b.id === 'saoLuu') return taiFile(new Blob([JSON.stringify({ds: DS}, null, 1)], {type:'application/json'}), `sao-luu-branding_${DS.length}-du-an_${hom()}.json`);
+  if (b.id === 'khoiP') return $('#khoiPhuc').click();
+});
+document.addEventListener('keydown', async e => {
+  const c = e.target.dataset && e.target.dataset.themCot;
+  if (e.key === 'Escape' && NG) return dongNgan();
+  if (!c || e.key !== 'Enter' || !e.target.value.trim()) return;
+  const d = moiDA(); d.ten = e.target.value.trim(); d.tt = c; d.xep = Math.max(0, ...DS.filter(x => x.tt === c).map(khoaXep)) + 1000;
+  DS.unshift(d); await KHO.ghi(d); veDash(); veSB(); const i = $(`[data-them-cot="${c}"]`); if (i) i.focus(); bao('Đã thêm “' + d.ten + '” · bấm thẻ để nhập tiếp');
+});
+document.addEventListener('input', e => {
+  if (e.target.id === 'tim'){ F.q = e.target.value; F.trang = 1; const c = e.target.selectionStart; veDash(); const t = $('#tim'); t.focus(); t.setSelectionRange(c, c); }
+});
+document.addEventListener('change', e => {
+  if (e.target.id === 'locNam'){ F.nam = e.target.value; F.trang = 1; veDash(); }
+  if (e.target.id === 'sapXep'){ F.sx = e.target.value; veDash(); }
+  if (e.target.id === 'ttTop'){ P.tt = e.target.value; luu(); veSB(); const s = $('[data-p="tt"]'); if (s) s.value = P.tt; }
+});
+$('#khoiPhuc').onchange = async e => { const file = e.target.files[0]; if (!file) return;
+  try { const o = JSON.parse(await file.text()); const ds = o.ds || o; if (!Array.isArray(ds)) throw 0; const ids = new Set(DS.map(x => x.id)); let n = 0;
+    for (const x of ds){ if (!ids.has(x.id)){ chuanHoa(x); DS.push(x); await KHO.ghi(x); n++; } } veTat(); bao('Đã khôi phục ' + n + ' dự án mới'); }
+  catch(err){ bao('File sao lưu không hợp lệ'); } e.target.value = ''; };
+
+/* ---------- xuat ---------- */
+function bao(t){ const o = $('#toast'); o.textContent = t; o.classList.add('on'); clearTimeout(bao.t); bao.t = setTimeout(() => o.classList.remove('on'), 2600); }
+function taiFile(blob, ten){ const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = ten; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 3000); }
+const khongDau = s => String(s).normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/đ/g,'d').replace(/Đ/g,'D').replace(/[\\/:*?"<>|]+/g,'-').trim();
+function tenFile(){ const v = VIEW, dd = P.ngay.split('-').reverse().join('-'), ai = khongDau(P.ten || P.kh.cty || 'Du an'), so = P.so.replace('/', '-');
+  return {kh: `${so} - Ho so du an - ${ai}`, brief: `${dd} - Branding Brief - ${ai}`, bg: `${dd} - Bao Gia - ${ai}`, hd: `${so} - Hop dong chuyen gia - ${ai}`, dh: `${dd} - Dinh huong thuong hieu - ${ai}`,
+    giao: String(P.giao.doc).startsWith('pt') ? `${so} - Phieu thu dot ${+P.giao.doc.slice(2) + 1} - ${ai}` : `${so} - Bien ban nghiem thu - ${ai}`}[v]; }
+$('#inPDF').onclick = () => { if (Date.now() - (window._lp || 0) < 1500) return; window._lp = Date.now(); const t = document.title; document.title = tenFile(); window.print(); setTimeout(() => document.title = t, 500); };
+$('#chepVB').onclick = () => { navigator.clipboard && navigator.clipboard.writeText($('#doc').innerText); bao('Đã chép nội dung văn bản'); };
+$('#taiWord').onclick = () => {
+  const st = [...document.querySelectorAll('style')].map(s => s.textContent).join('\n');
+  const html = `<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word"><head><meta charset="utf-8"><title>${esc(tenFile())}</title>
+    <style>@page{size:21cm 29.7cm;margin:2cm 2cm 2cm 2.5cm} body{font-family:Arimo,Arial,sans-serif;font-size:11pt;line-height:1.5}${st} .doc{padding:0!important;box-shadow:none;width:auto}</style></head>
+    <body><div class="doc">${$('#doc').innerHTML.replace(/<span class="bien">/g, '<span>')}</div></body></html>`;
+  taiFile(new Blob(['﻿', html], {type:'application/msword'}), tenFile() + '.doc'); bao('Đã tải file Word');
+};
+
+/* ---------- khoi dong ---------- */
+nap().then(dinhTuyen);
+</script>
+</body>
+</html>

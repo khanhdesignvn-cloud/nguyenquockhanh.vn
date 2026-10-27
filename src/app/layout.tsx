@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="vi" className={`${beVietnam.variable} h-full antialiased`}>
+    <html lang="vi" suppressHydrationWarning className={`${beVietnam.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-ink-950 text-foreground">
         <div className="gradient-mesh" aria-hidden="true" />
         <Header />
