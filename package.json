@@ -10,12 +10,15 @@
   },
   "dependencies": {
     "@fontsource-variable/google-sans-flex": "^5.3.2",
+    "@vercel/blob": "^2.8.2",
+    "bcryptjs": "^3.0.3",
     "next": "16.3.1",
     "react": "19.2.8",
     "react-dom": "19.2.8"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@types/bcryptjs": "^2.4.6",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex"><title>Nhập dữ liệu từ máy chủ cũ</title>
+<style>body{font:15px/1.5 system-ui,sans-serif;max-width:640px;margin:40px auto;padding:0 16px;color:#1f1e1d}
+button{background:#998EE0;color:#fff;border:0;border-radius:20px;padding:10px 18px;font-size:15px;cursor:pointer}
+button:disabled{opacity:.5}pre{background:#f5f4ef;padding:12px;border-radius:8px;white-space:pre-wrap}label{display:block;margin:14px 0 6px}</style></head>
+<body>
+<h1>Nhập dữ liệu từ máy chủ cũ</h1>
+<p>Bước 1: đăng nhập tại <a href="/admin">/admin</a> (tạo mật khẩu nếu là lần đầu). Bước 2: chọn thư mục <b>nqk-data</b> đã giải nén từ file zip rồi bấm Nhập.</p>
+<label>Thư mục nqk-data</label>
+<input id="dir" type="file" webkitdirectory multiple>
+<label><input id="cfg" type="checkbox"> Dùng lại mật khẩu quản trị cũ (bỏ chọn để giữ mật khẩu mới)</label>
+<p><button id="go" disabled>Nhập dữ liệu</button></p>
+<pre id="log">Chưa chọn thư mục.</pre>
+<script>
+const log=t=>{document.getElementById('log').textContent+='\n'+t};
+let csrf='';
+fetch('/api.php?a=me',{credentials:'same-origin'}).then(r=>r.json()).then(j=>{
+  if(!j.logged){document.getElementById('log').textContent='Chưa đăng nhập. Mở /admin để đăng nhập trước.';return}
+  csrf=j.csrf;document.getElementById('go').disabled=false;document.getElementById('log').textContent='Đã đăng nhập. Chọn thư mục nqk-data.';
+});
+async function post(a,body,raw){
+  const r=await fetch('/api.php?a='+a,{method:'POST',credentials:'same-origin',headers:{'X-CSRF':csrf},body:raw?body:JSON.stringify(body)});
+  const j=await r.json();if(!j.ok)throw new Error(j.error||r.status);return j;
+}
+document.getElementById('go').onclick=async()=>{
+  const fs=[...document.getElementById('dir').files];
+  if(!fs.length){log('Chưa chọn thư mục.');return}
+  const names=['content','content_history','jobs','leads','settings','company','config'];
+  const files={};
+  for(const f of fs){
+    const m=f.name.match(/^(.+)\.php$/);
+    if(m&&names.includes(m[1])&&!/briefs\//.test(f.webkitRelativePath))files[m[1]]=await f.text();
+  }
+  try{
+    for(const n of Object.keys(files)){
+      const j=await post('import',{files:{[n]:files[n]},withConfig:document.getElementById('cfg').checked});
+      log('Đã nhập: '+(j.imported.join(', ')||n+' (bỏ qua)'));
+    }
+    for(const f of fs){
+      if(/briefs\//.test(f.webkitRelativePath)&&/\.pdf$/.test(f.name)){
+        await post('import_pdf&id='+encodeURIComponent(f.name.replace(/\.pdf$/,'')),await f.arrayBuffer(),true);
+        log('Đã nhập PDF brief: '+f.name);
+      }
+    }
+    log('Xong. Mở /admin để kiểm tra.');
+  }catch(e){log('Lỗi: '+e.message)}
+};
+</script></body></html>

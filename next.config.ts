@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
     return [
       { source: "/api.php", destination: "/api/nqk" },
       { source: "/branding", destination: "/branding/index.html" },
+      { source: "/admin", destination: "/admin/index.html" },
     ];
   },
 };
