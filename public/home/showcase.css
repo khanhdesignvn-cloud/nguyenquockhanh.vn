@@ -38,11 +38,11 @@
 .sc-goals>div{border-top:2px solid var(--sc-border);padding-top:18px}
 
 /* dự án */
-.sc-projects{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.sc-projects{display:grid;grid-template-columns:1fr;gap:24px}
 .sc-proj{padding:0;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
 .sc-proj:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(20,20,19,.10)}
-.sc-proj img{width:100%;aspect-ratio:1500/520;object-fit:cover}
-.sc-proj-cap{padding:20px 22px 22px;display:grid;gap:10px}
+.sc-proj img{width:100%;height:auto;aspect-ratio:2400/570;object-fit:cover;background:#eee}
+.sc-proj-cap{padding:20px 24px 22px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr) minmax(0,.8fr);gap:24px;align-items:start}
 .sc-proj-cap h3{font-size:1.25rem}
 .sc-proj-cap small{display:block;font-size:.8rem;color:var(--sc-sub);margin-top:4px}
 .sc-proj-cap p{margin:0}
@@ -60,7 +60,7 @@
 .sc-team-list b{display:block;font-size:.98rem;font-weight:600}
 .sc-team-list small{font-size:.8rem;color:var(--sc-sub)}
 .sc-act{padding:0;overflow:hidden}
-.sc-act img{width:100%;aspect-ratio:4/4.4;object-fit:cover}
+.sc-act img{width:100%;aspect-ratio:9/10;object-fit:cover}
 .sc-act>div{padding:16px 18px 20px}
 .sc-act .nqk-eyebrow{font-size:.66rem;margin-bottom:6px}
 
@@ -83,7 +83,8 @@
   .sc-about,.sc-vm,.sc-projects,.sc-cta,.sc-grid3{grid-template-columns:1fr}
   .sc-portrait{max-width:420px}
   .sc-journey li{grid-template-columns:1fr;gap:2px}
-  .sc-proj img{aspect-ratio:16/8}
+  .sc-proj img{aspect-ratio:16/9}
+  .sc-proj-cap{grid-template-columns:1fr;gap:10px}
 }
 @media (max-width:480px){
   .sc-grid4{grid-template-columns:1fr}

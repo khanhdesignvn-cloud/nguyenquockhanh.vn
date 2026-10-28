@@ -171,7 +171,7 @@ export default function HomePage() {
               {projects.map((p, i) => (
                 <article key={p.k} className="hp-proj">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={`/home/${p.k}.webp`} alt={`Nhận diện thương hiệu ${p.n}`} width={1500} height={363} loading="lazy" />
+                  <img src={`/home/${p.k}.webp`} alt={`Nhận diện thương hiệu ${p.n}`} width={2400} height={570} loading="lazy" />
                   <div className="hp-cap">
                     <h3><i>{n2(i)}</i>{p.n}</h3>
                     <dl className="hp-meta">
