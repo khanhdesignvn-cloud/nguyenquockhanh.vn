@@ -46,4 +46,16 @@ document.getElementById('go').onclick=async()=>{
     log('Xong. Mở /admin để kiểm tra.');
   }catch(e){log('Lỗi: '+e.message)}
 };
+
+/* Nhận dữ liệu gửi sang từ tab cPanel cũ (cùng chủ, chỉ chấp nhận đúng nguồn này). */
+window.addEventListener('message',async ev=>{
+  if(ev.origin!=='https://nguyenquockhanh.vn:2083'||!ev.data||ev.data.type!=='nqk-import')return;
+  const reply=m=>{try{ev.source.postMessage({type:'nqk-import-log',m},ev.origin)}catch(_){}};
+  try{
+    if(!csrf){const j=await fetch('/api.php?a=me',{credentials:'same-origin'}).then(r=>r.json());if(!j.logged)throw new Error('chưa đăng nhập');csrf=j.csrf}
+    for(const [n,t] of Object.entries(ev.data.files||{})){const j=await post('import',{files:{[n]:t},withConfig:false});log('Đã nhập: '+n);reply('ok '+n+' '+j.imported.join(','))}
+    for(const p of ev.data.pdfs||[]){await post('import_pdf&id='+encodeURIComponent(p.id),p.buf,true);log('Đã nhập PDF: '+p.id);reply('ok pdf '+p.id)}
+    reply('done');
+  }catch(e){log('Lỗi: '+e.message);reply('error '+e.message)}
+});
 </script></body></html>
