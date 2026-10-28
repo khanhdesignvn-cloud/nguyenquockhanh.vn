@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 // Giao diện trang chủ cũ (WordPress) được giữ nguyên làm trang /bao-gia.
-const markup = fs.readFileSync(path.join(process.cwd(), "src/app/bao-gia/markup.html"), "utf8");
+const markup = fs.readFileSync(path.join(process.cwd(), "src/app/(site)/bao-gia/markup.html"), "utf8");
 
 const cfg = `window.NQK_CFG={api:'/api.php',default:'/nqk-default.json',theme:'light'};
 (function(){var t='light';try{t=localStorage.getItem('nqk-theme')||t}catch(e){}if(t==='light')document.documentElement.classList.add('nqk-light')})();`;

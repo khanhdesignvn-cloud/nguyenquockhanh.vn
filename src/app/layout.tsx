@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { Be_Vietnam_Pro } from "next/font/google";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import "./globals.css";
 
 const beVietnam = Be_Vietnam_Pro({
@@ -11,23 +9,19 @@ const beVietnam = Be_Vietnam_Pro({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.nguyenquockhanh.vn"),
   title: {
-    default: "Nguyễn Quốc Khánh – Chuyên gia Nhận diện Thương hiệu",
+    default: "Nguyễn Quốc Khánh – Người kể chuyện thương hiệu",
     template: "%s | Nguyễn Quốc Khánh",
   },
   description:
-    "Khóa học, podcast và kiến thức thực chiến về nhận diện thương hiệu từ chuyên gia Nguyễn Quốc Khánh. Xây dựng thương hiệu có bản sắc, có chiến lược, có kết quả.",
+    "Nguyễn Quốc Khánh, Giám đốc sáng tạo Horus Agency: tư vấn và thiết kế nhận diện thương hiệu, logo, bao bì, website cho doanh nghiệp Việt.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="vi" suppressHydrationWarning className={`${beVietnam.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-ink-950 text-foreground">
-        <div className="gradient-mesh" aria-hidden="true" />
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
-      </body>
+      <body className="min-h-full">{children}</body>
     </html>
   );
 }
